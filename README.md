@@ -1,4 +1,4 @@
-# Your Project's Name
+# Websolver
 
 One or two paragraphs providing an overview of your project.
 
@@ -19,7 +19,10 @@ In this section, you should go over the different parts of your project, and des
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Feature 1: User Authentication. The project should include an authentication mechanism, allowing a user to register and log in. There should be a good reason as to why the users would need to log in e.g. a user would have to register to persist their shopping cart between sessions, otherwise it will be lost.
+- Feature 2: Stripe Payments (Django App). At least one of your Django apps should contain some e-commerce functionaity usins Stripe. This may be a shopping cart checkout, subscription-based payments or single payments etc.
+- Feature 3: User Requests. Include at least one form with validation that will allow users to create and edit models in the backend, in addition to the authentication mechanism.
+- Feature 4: Responsive UI. The UI should be responsive, use either media queries or a resonsive framework such as Bootstrap to make sure the site looks well on all commonly-used devices.
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
@@ -34,7 +37,18 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 - [JQuery](https://jquery.com)
     - The project uses **JQuery** to simplify DOM manipulation.
-
+- [Django]()
+    - This project uses **Django** and is composed of multiple apps, an app for each reusable component in the project.
+- [Database]()
+    - The project will need to connect to a database e.g. sqlite or Postgres, using Django's ORM.
+- [JavaScript]()
+    - The front end should contain some JavaScript to enhance the user experience.
+- [Python/Django packages]()
+    - Whenever relevant, the backend should integrate with third-party Python/Django packages, such as Django Rest Frawmwork, etc. Strive to choose the best tool for each purpose.
+- [Travis CI]()
+    - Make sure to test your project extensively. In particular, make sure that no unhandled exceptions are visible to users, under any circumstance. Use autoamted Django tests wherever possible.
+- [Jasmine Tests]()
+    - For your JavaScript code, consider using Jasmine tests.
 
 ## Testing
 
