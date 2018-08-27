@@ -1,69 +1,81 @@
-### Raw Dessert Recipes
-A data-driven web application that allows users to easily access, add new and edit recipes.
+# Your Project's Name
 
-### Functionalities
-1. **Recipes (homepage)**
-    * **Recipes**: User selects the drop-down arrow, which displays recipe details in an accordion popout style.
-    * **Edit Button**: User selects the edit button to update/make changes to the recipe. The recipe with all details opens in an edit recipe page and includes the recipe details. The user make changes and adds a new version of the recipe by selecting the edit recipe button.
-    * **Delete Button:** User selects the delete button to remove a recipe.
-2. **New Recipes**
-    * **New Recipes**: User selects new recipes on the navbar to open the new recipe page. User inputs recipe details and selects add recipe button to add the recipe.
+One or two paragraphs providing an overview of your project.
 
-### Technologies
-1. **Cloud 9**: IDE `Integrated Development Environment` used to build project end to end.
-2. **Materialize**: A web design library created by Google. Used for styling and interactive design, e.g. Buttons, Forms, Icons.
-3. **mLab**: Cloud database service that hosts MongoDB databases. Used for creating and storing recipe data.
-4. **Flask**: A python microframework used to build and run the application. Flask offers beneficial functionality such as template logic, which allows the `base.html` file to be inherited on other html files via `{% extends 'base.html' %} {% block content %} {% endblock %}` code.
-5. **Python code**: Written within `app.py`. Used to write the logic of creating, reading, updating and deleting recipes.
-6. **HTML files**: Used to build the structure of each application page.
-7. **Chrome Dev Tools**: Used to execute inspection of application in browser and to perform UAT, including responsive testing.
-8. **Git and GitHub**: Used for version control and to deploy a backup of the project.
-9. **Heroku**: Used to deploy and host the project.
+Essentially, this part is your sales pitch.
+ 
+## UX
+ 
+Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-### Other Resources
-1. **Recipe details**: For the purpose of populating this project used this [Recipe Website](http://rawfoodrecipes.com/).
+In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+- As a user type, I want to perform an action, so that I can achieve a goal.
 
-### Development Process
-1. **Workspace**: Blank `Cloud 9` workspace created.
-2. **README.md**: Created with outline of the project. Developed and finalised as project progressed.
-3. **Files & Folders**: Created in line with wireframe and developed as project progressed.
-4. **mLab**: Before building Cloud 9 code, first created the MongoDB database.
-    * **New DB:** Created new database, selecting AWS Sandbox with 0.5GB free storage.
-    * **DB Schema:** Created new collection i.e. document, which represents a recipe. Within each document created key value pairs per wireframe, e.g. "recipe_title": "Raw Chocolate Buttons". Saved a couple of new recipes to link flask to whilst building project. Each new recipe created on the front end would then save as a document under collections.
-    * **User:** Create admin user and added relevant mongoDB code to app.py to connect application with database.
-5. **Flask**: Installed Flask via sudo pip3 install flask command.
-6. **App.py**: Developed code to run flask and added code throughout build to render html files in browser.
-7. **Materialize**: Developed code to include relevant Materialize links within html files to import library.
-8. **Font Awesome**: Develoepd code to include relevant Font Awesome links within html files to import library.
-8. **HTML files**: Developed HTML code to build structure of each web application page.
-9. **CSS file**: Developed CSS code to add own custom styling.
-10. **Commentary**: Developed commentary throughout to provide code guidance.
-11. **Cloud 9 Linux Terminal**: Used to backup project via incremental `git status, git add <file/s> (staging area), git commit -m "<commentary>"` commands.
+This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
-### Testing
-**Manual testing**, ongoing via `Cloud 9`, `Run`. Once each functionality code developed, checked operated as expected in the web browser by walking through each functionality. The following bugs were encountered:
+## Features
 
-1. **Recipes.html**
-    1. **Bug/Expected Output** - Application not rendering in browser. **Issue** - spelled {{ endfor }}. **Fix** - Scanned code. Updated jinja code to {% endfor %}.
-    2. **Bug/Expected Output** - Application not rendering in browser. **Issue** - app.py '@app.route('add_recipe')'. **Fix** - Added missing '/', to '@app.route('/add_recipe')'.
-    3. **Bug/Expected Output** - Date posted not appearing after selecting edit. **Issue** - Wording for key value within mongoDB not in line with application. **Fix** Updated from 'posted_date' to 'date_posted' to correctly align all code.
-2. **Addrecipe.html**
-    1. **Bug/Expected Output** - Date posted populating on form but not showing when recipe added. **Issue** - Spelled {{recipe.posted_date}} **Fix** - {{recipe.date_posted}}, words wrong way around.
-3. **Editrecipe.html**
-    1. **Bug/Expected Output** - Application not rendering in browser. **Issue** - spelled @app.route('/eit_recipe/<recipe_id>') **Fix** - spelled @app.route('/edit_recipe/<recipe_id>').
-    2. **Bug/Expected Output** - Date posted not appearing. **Issue** - Script bug, written as #Date_posted. **Fix** - Updated to #date_posted.
-4. **Responsive Testing**: Used Chrome Dev tools to inspect application on various device sizes.
-    1. **Bug/Expected Output** - Background image not responsive. **Issue** - Included as a div with static width and height html. **Fix** - Updated as div with css 'bg' class. Added css styling for responsive image.
-5. **Heroku Testing**: Tested to ensure application successfully hosted.
-    1. **Bug/Expected Output** - Application error, not rendering in browser. **Issue** - Requirements.txt not updated posted pymongo installation. **Fix** - Checked app log within Heroku for error messages. Ran sudo pip3 freeze --local > requirements.txt and pushed to Heroku. 
+In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+ 
+### Existing Features
+- Feature 1 - allows users X to achieve Y, by having them fill out Z
+- ...
 
-### Deploy via Heroku
-1. Via Linux Terminal, login to Heroku, using 'Heroku login' command. Input Heroku login details.
-2. Create new Heroku app, using 'heroku apps:create appname' command.
-3. Push project to Heroku, using 'push -u heroku master' command.
-4. Create scale, using 'heroku ps:scale web=1' command.
-5. Login to Heroku and select newly created app.
-6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
-7. From 'More' menu on the top right, select 'Restart all dynos'.
-8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-9. Deployed via Heroku: [Raw Dessert Recipes](https://cookbook-mongodb.herokuapp.com/).
+For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+
+In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+
+### Features Left to Implement
+- Another feature idea
+
+## Technologies Used
+
+In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+
+- [JQuery](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+
+
+## Testing
+
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+
+For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+
+1. Contact form:
+    1. Go to the "Contact Us" page
+    2. Try to submit the empty form and verify that an error message about the required fields appears
+    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
+    4. Try to submit the form with all inputs valid and verify that a success message appears.
+
+In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+## Deployment
+
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+
+In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+- Different values for environment variables (Heroku Config Vars)?
+- Different configuration files?
+- Separate git branch?
+
+In addition, if it is not obvious, you should also describe how to run your code locally.
+
+
+## Credits
+
+### Content
+- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+
+### Media
+- The photos used in this site were obtained from ...
+
+### Acknowledgements
+
+- I received inspiration for this project from X
