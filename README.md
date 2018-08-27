@@ -1,4 +1,4 @@
-# Websolver
+# Website Development Solutions
 
 One or two paragraphs providing an overview of your project.
 
@@ -19,10 +19,43 @@ In this section, you should go over the different parts of your project, and des
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
+
+- Previously developed / resolved queries, services and bugs = free
+- Develop additional features = fee based on ?
+- Ticket: Primary entity in the issues tracker is a ticket describing a users issue. Allow users to create tickets, comment on tickets and show the status of the ticket (e.g. to do, doing, done).
+- Issues come in two varities
+- Bugs: Which you'll fix for free.
+- Features: Which you'll only develop if you're offered money.
+Upvoting
+- To help you prioritise your work, your users will be able to upvote bugs (signifying 'I have this too'), and upvote feature requests (signifying 'I want to have this too').
+- Whilse upvoting bugs is free, to upvote a feature request, users would need to pay some money (with a minimum amount of your choice) to pay for your time working on it. In turn, you promise always to spend at least 50% of your tie working on developing the highest-paid feature.
+Graphs
+- To offer transparency to your users, you decide to create a page that contains some graphs showing how many bugs or features are tended to on a daily, weekly, and monthly basis, as well as the highest-voted bugs and features.
+Additional Pages
+- Add any additional pages that would help you attract users to the Issue Tracker, and have them pay you well.
+- To make users participate as much as possible in your online community, make sure that your UI/UX is sublime.
+- Feel free to add additional features, such as a blog, extra perks for active participants, etc.
+Documentation
+- If you want to have more fun with this, feel free also to add pages describing your fictional UnicornAttractor application.
+- And of course, as this project is going to be the lifeblood of your company, it's essential that new developers that join the company will be able to get up and running as quickly as possible. Documentation is the best way to achieve this.
+
+
 - Feature 1: User Authentication. The project should include an authentication mechanism, allowing a user to register and log in. There should be a good reason as to why the users would need to log in e.g. a user would have to register to persist their shopping cart between sessions, otherwise it will be lost.
 - Feature 2: Stripe Payments (Django App). At least one of your Django apps should contain some e-commerce functionaity usins Stripe. This may be a shopping cart checkout, subscription-based payments or single payments etc.
 - Feature 3: User Requests. Include at least one form with validation that will allow users to create and edit models in the backend, in addition to the authentication mechanism.
 - Feature 4: Responsive UI. The UI should be responsive, use either media queries or a resonsive framework such as Bootstrap to make sure the site looks well on all commonly-used devices.
+
+
+
+
+
+
+
+
+
+
+
+
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
