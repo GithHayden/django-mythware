@@ -1,6 +1,8 @@
-# Website Solutions
+# Mythsoft
 
 One or two paragraphs providing an overview of your project.
+
+Mythical Software is a web and mobile based application...
  
 ## UX
  
