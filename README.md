@@ -1,9 +1,7 @@
 # Mythware
 
-One or two paragraphs providing an overview of your project.
+Mythware is an agile project management web application. Providing features from brainstorming tools i.e. the unicorn-inator, to project planning and completion. In addition, Mythware provides an issues tracker, where users can track and submit new issues to have bugs resolved for free or submit tickets requesting additional features, for a cost.
 
-Mythware is an agile project management web application. Providing features from brainstorming tools i.e. the unicorn-inator, to project planning and completion. In addition, Mythware provides an issues tracker, where users can submit tickets to have bugs resolved for free or submit tickets requesting additional features, for a cost.
- 
 ## UX
  
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -36,7 +34,7 @@ For some/all of your features, you may choose to reference the specific project 
 - **Feature 11: Blog.**
 - **Feature 12: Social Links.**
 - **Feature 13: Documentation.** To allow new developers that join the company to get up and running as quickly as possible.
-- **Feature 14: About.** Describing Website Solutions application.
+- 
 - **Feature 15: Video.**
 - **Feature 16: Search.**
 - **Feature 17: Subscribe to news.**
