@@ -25,8 +25,7 @@ SECRET_KEY = '$d$)e0%bym84lik++n5rxmb#n5z*)qtc=cbc=!*je9=tcel^j1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME')]
 
 # Application definition
 
