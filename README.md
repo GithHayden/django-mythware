@@ -88,6 +88,10 @@ If this section grows too long, you may want to split it off into a separate fil
     1. **Bug/Expected Output** - . **Issue** - . **Fix** - Scanned code. .
 
 
+Bugs
+Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
+
+
 ## Deployment
 
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
