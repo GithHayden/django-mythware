@@ -3,115 +3,168 @@
 Mythware is an agile project management web application. Providing features from brainstorming tools i.e. the unicorn-inator, to project planning and completion. In addition, Mythware provides an issues tracker, where users can track and submit new issues to have bugs resolved for free or submit tickets requesting additional features, for a cost.
 
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The following section describes the UX process for this project.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
+#### UX Process
+1. **Layout** - Reviewed the Code Institute learnings to date and Bootstrap themes to extract design ideas.
+2. **User Stories** - Walked through user stories.
+    1. **Navbar - Home** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
+    2. **Navbar - Recipes** - As a user, I want to be able to easily access, update and delete recipes.
+    3. **Navbar - New Recipes** - As a user, I want to be able to add new recipes, to contribute to the database of recipes, for other users to access.
+    4. **Navbar - Contact** - As a user, I want to be able to contact the website developers to offer feedback and suggestions.
+    5. **Footer - Social Links** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story.
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
 ### Existing Features
+The following section describes the front-end features in this project.
 
-For some/all of your features, you may choose to reference the specific project files that implemented them, although this is entirely optional.
-
-- Feature 1 - allows users X to achieve Y, by having them fill out Z.
-
-- **Feature 1: User Authentication.** The project should include an authentication mechanism, allowing a user to register and log in. There should be a good reason as to why the users would need to log in e.g. a user would have to register to persist their shopping cart between sessions, otherwise it will be lost.
-- **Feature 2: Stripe Payments (Django App).** At least one of your Django apps should contain some e-commerce functionaity usins Stripe. This may be a shopping cart checkout, subscription-based payments or single payments etc.
-- **Feature 3: User Requests.** Include at least one form with validation that will allow users to create and edit models in the backend, in addition to the authentication mechanism.
-- **Feature 4: Responsive UI.** The UI should be responsive, use either media queries or a resonsive framework such as Bootstrap to make sure the site looks well on all commonly-used devices.
-- **Feature 5: Free Bugs and Services.** Free services for previously developed applications or answered issues.
-- **Feature 6: Paid Bugs and Services.** Develop new applications, resolve bugs on applications, not previously developed by Website Solutions.
-- **Feature 7: User Ticket Request.** Ticket on an issues tracker, describing a users request. Allows users to create tickets, comment on tickets and show the status of the ticket, i.e. Open, In Progress, Complete. Issues will come in 2 varities. Free and Paid.
-- **Feature 8: Upvoting.** To prioritise work, useers will be able to upvote bugs, signifying 'I have this too'
-, and upvote feature requests, signifying 'I want to have this too'. Whilst upvoting is free, to upvote a feature request, users would need to pay some money, with a minimum amount of your choice, to pay for your time working on it. In turn, you promise always to spend at least 50% of your time working on developing the highest-paid feature.
-- **Feature 9: Graphs.** To offer transparency to your users, you decide to create a page that contains some grpahs showing how many bugs or features are tended to on a daily, weekly and monthly basis, as well as the highest-voted bugs and features.
-- **Feature 10: Contact.** For users to directly contact developers/company.
-- **Feature 11: Blog.**
-- **Feature 12: Social Links.**
-- **Feature 13: Documentation.** To allow new developers that join the company to get up and running as quickly as possible.
-- 
-- **Feature 15: Video.**
-- **Feature 16: Search.**
-- **Feature 17: Subscribe to news.**
+1. **Navbar - Home** - Provide users with a navbar menu, which brings users to the home page. The home page includes a summary on the health benefits of raw food and a description about the website.
+2. **Navbar - Recipes** - Provides users with a navbar menu, which brings users to the recipes page, displaying each recipe title and description on a card. Recipe details can be viewed by selecting 'View Recipe'. The recipe selected is then displayed, which contains a recipe title, description, ingredients, instructions, author and date posted. Users are also provided with an 'Update Recipe' and 'Delete Forever' button, which allows them to update all areas of a recipe or to delete a recipe. A warning message is displayed with a red background, above the Delete Forever and Update Recipe button.
+3. **Navbar - New Recipes** - Provides users with a navbar menu, which brings users to the new recipes page. This page displays a blank form and allows users to add new recipes, which are then displayed on the recipes page.
+4. **Navbar - Contact** - Provides users with a navbar menu item, which brings users to the contact page. This page displays a blank form, which allows users to contact the website developers to offer feedback and suggestions (not currently wired up to an email address as this is not a real business).
+5. **Footer - Social Links** - Provides users with links to the website social media pages (no current social media pages for this project as this is not a real business).
 
 ### Features to Implement
-- Another feature idea
+1. **Recipe Authors** - Add a feature to include author registration and a separate page showing all recipe authors.
+2. **Blog** - Add a feature to include a blog page.
+3. **Recipe Image** - Add a feature to upload an image related to the recipe.
+4. **Recipe Details** - Add a feature to display recipe ingredients and instructions as lists.
+5. **Date picker** - Add a date picker into the 'Date Posted' field, to maintain the same date format throughout.
+6. **Search, Sort, Filter, Pagination** - Add these types of features to facilitate the recipe page as it increases in size.
+7. **Prep Time** - Add a feature to include prep time.
 
 ## Technologies Used
+The following section describes all technologies used to construct this project.
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+- [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
+    - This project used **Cloud 9**, an online integrated development environment, to construct the code end to end.
+- [Bootstrap](https://getbootstrap.com/)
+    - This project used **Bootstrap**, a library of website themes. The [Business Casual Template](https://startbootstrap.com/template-overviews/business-casual/), was used for this project.
+        - **Static folder**: All files except the `custom.css`, `bg.jpg`,`intro.jpg` files, were copied from the bootstrap template.
+        - **.html files**: All `.html` files used the bootstrap `.html` files as boiler plate code. The project developer then amended and built upon each of these files to suit this project.
+        - **gulpfile.js, package-lock.json, package.json files**: Each of these files were included with the bootstrap template.
+        - **All Other Code**: Compiled by the project developer.
+- [Flask](http://flask.pocoo.org/)
+    - This project uses **Flask**, a Python micro-framework. It is classified as a microframework because it does not require particular tools or libraries.
+- [mLab](https://mlab.com/)
+    - This project uses **mLab**, a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers. The developer used an mLab sandbox DB, which is for learning and prototyping. Json value pairs were added into the mLab document to align with the recipe wireframe. For example, 'Recipe_Title: Title', is the json value pair within the mLab database for the Recipe Title.
+- [MongoDB](https://www.mongodb.com/)
+    - This project uses **mongoDB**, a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.
+- [Jinga](http://jinja.pocoo.org/)
+    - This project uses **Jinja**, a template engine for Python, jinja code is included within the curly brackets.
+- [Python](https://www.python.org/)
+    - This project uses **Python**, an interpreted high-level programming language for general-purpose programming and used to write the logic of this game, which is included within `.py` files.
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+    - This project uses **HTML**, the standard mark-up language used to build website layout, which is included within the `.html` files.
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    - This project uses **CSS**, a style sheet language, used to add styling to a website. The `custom.css` file was added to this project, to add additional styling on top of the Bootstrap template.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    - This project uses **JavaScript**, an object-oriented programming language used to create interactive effects within web browsers. JavaScript within this project was included with the Bootstrap template.
+- [Chrome Dev Tools](https://developers.google.com/web/tools/chrome-devtools/)
+    - This project uses **Chrome Dev Tools**, a set of web developer tools, to continuously test and inspect that the web pages are rendering as intended within the browser.
+- [GitHub](https://github.com/)
+    - This project uses **GitHub**, a web hosting service, for version control and final project backup.
+- [Heroku](https://www.heroku.com/home)
+    - This project uses **Heroku**, a web hosting service that supports Python applications, for final project deployment.
+- [All Other Technologies](https://startbootstrap.com/template-overviews/business-casual/)
+    - All other technologies within this project were included with the Bootstrap template.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-- [Django]()
-    - This project uses **Django** and is composed of multiple apps, an app for each reusable component in the project.
-- [Database]()
-    - The project will need to connect to a database e.g. sqlite or Postgres, using Django's ORM.
-- [JavaScript]()
-    - The front end should contain some JavaScript to enhance the user experience.
-- [Python/Django packages]()
-    - Whenever relevant, the backend should integrate with third-party Python/Django packages, such as Django Rest Frawmwork, etc. Strive to choose the best tool for each purpose.
-- [Travis CI]()
-    - Make sure to test your project extensively. In particular, make sure that no unhandled exceptions are visible to users, under any circumstance. Use autoamted Django tests wherever possible.
-- [Jasmine Tests]()
-    - For your JavaScript code, consider using Jasmine tests.
-
-## Testing
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-
-**Manual testing**, ongoing via `Cloud 9`, `Run`. Once each functionality code developed, checked operated as expected in the web browser by walking through each functionality. The following bugs were encountered:
-
-1. **Feature x**
-    1. **Bug/Expected Output** - . **Issue** - . **Fix** - Scanned code. .
 
 
 Bugs
 Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
 
+## Testing
+The following is an overview of testing to ensure all functionality works as intended in this project.
+
+1. **Navbar - Home**:
+    1. Select 'Contact' on the navbar and move the user away from the home page.
+    2. Select 'Home' on the navbar.
+    3. Verify that 'Home' is highlighted on the navbar and that the user is moved to the home page.
+    4. Verify that the page header, footer, social links, image and text are displayed as intended.
+        - **Bug 1** - Application not rendering in the browser.
+            - **Issue** - app.py file `@app.route('add_recipe')` not correct.
+            - **Fix** - Added missing `/`, to `@app.route('/add_recipe')`.
+        - **Bug 2** - Application not rendering in the browser.
+            - **Issue** - Incorrectly spelled code as `{{ endfor }}`.
+            - **Fix** - Scanned all code. Updated code to `{% endfor %}`. 
+        - **Bug 3** - Home is not highlighted on the navbar.
+            - **Issue** - Overwrote bootstrap nav html tags, losing bootstrap div styling classes.
+            - **Fix** - Added `active` class to 'Home' navbar menu. Corrected on all navbar menu items, within each `html` file.
+2. **Navbar - Recipes**:
+    1. Select 'Recipes' on the navbar.
+    2. Verify that 'Recipes' is highlighted on the navbar and that the user is moved to the recipes page.
+    3. Verify that the page header, footer, social links and all recipes are displayed as intended.
+    4. Select 'View Recipe' and verify that the button is highlighted.
+    5. Verify that the user is brought to a new page and that all the recipe details are displayed as intended.
+    6. Select 'Update Recipe' and verify that the user is brought to a new page, where a form is displayed.
+    7. Verify that this form contains all of the recipe details, which can be updated and over-written.
+    8. Verify that a red alert box is displayed, guiding the user as intended. Select X on the alert box and verify that the message disappears.
+    9. Once the Recipe has been updated, select 'Update Recipe'.
+    10. Verify that the user is brought to the recipes page and that the updated recipe is added to this page.
+    11. Verify that the old recipe is still on the recipes page for the user to refer back to if required and for the user to delete once satisfied with their updated recipe.
+    12. Select 'View Recipe' on the newly updated/added recipe.
+    13. Verify that the user is brought to a new page and that the recipes details are displayed.
+    14. Verify that a red alert box is displayed, guiding the user as intended. Select X on the alert box and verify that the message disappears.
+    15. Select 'Delete Forever'. Verify that the user is brought to the recipe page and that the recipe is deleted.
+        - **Bug 1** - Recipe cards not aligning vertically.
+            - **Issue** - The html `divs` require adjusting.
+            - **Fix** - Added `<div style="text-align: center">`.
+        - **Bug 2** - No spacing between the recipe cards.
+            - **Issue** - Recipe cards require margin styling.
+            - **Fix** - Added Bootstrap spacing classes i.e. mt and mb, to the relevant `divs`.
+        - **Bug 3** - Recipe cards are not all the same height.
+            - **Issue** - Recipe card sizes only stretching as far as the recipe description text, rather than aligning with the height of that `div` row.
+            - **Fix** - Added `d-flex align-items-stretch` to the relevant `div`.
+        - **Bug 4** - Recipe card buttons displaying randomly, rather than aligned at the end of each card.
+            - **Issue** - Card sizes only stretching as far as the recipe description text, rather than aligning with the design of that div row.
+            - **Fix** - Moved the button, down a `div`.
+3. **Navbar - New Recipes**:
+    1. Select 'New Recipes' on the navbar.
+    2. Verify that 'New Recipes' is highlighted on the navbar and that the user is moved to the new recipes page.
+    3. Verify that the page header, footer, social links and a blank form are displayed as intended.
+    5. Leave all form fields blank and select 'Add Recipe'. Verify that the user is required to populate all fields before a new recipe can be added.
+    6. Input dummy data into each form field. Select 'Add Recipe'. Verify that the user is brought to the recipes page and that the new recipe is added.
+        - **Bug 1** - Date posted field is populating but not displaying when the recipe is added to the recipes page.
+            - **Issue** - Incorrectly spelled `{{recipe.posted_date}}`.
+            - **Fix** - Updated to `{{recipe.date_posted}}`, as the words were the incorrect way around.
+4. **Navbar - Contact**:
+    1. Select 'Contact' on the navbar.
+    2. Verify that 'Contact' is highlighted on the navbar and that the user is moved to the contact page.
+    3. Verify that the page header, footer, social links and a blank form are displayed as intended.
+    5. Input dummy data into each form field. Select Submit, button highlighted but no further action happens. (This contact page is not currently wired up to an email account as this is not a real business.)
+5. **Responsive Testing**:
+    1. In Chrome, right click anywhere on the website and select 'inspect', to open the Chrome Dev tools.
+    2. Select the toggle device icon at the top of the window, to open the responsive testing window.
+    3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
 
 ## Deployment
+The following section describes the process to deploy this project to Heroku.
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+1. Ensure all required technologies are installed locally, as per the `requirements.txt`file.
+2. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
+2. Create new Heroku app, using 'heroku apps:create appname' command.
+3. Push project to Heroku, using 'push -u heroku master' command.
+4. Create scale, using 'heroku ps:scale web=1' command.
+5. Login to Heroku and select newly created app.
+6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
+7. From 'More' menu on the top right, select 'Restart all dynos'.
+8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+9. Deployed via Heroku: [Raw Dessert Recipes](https://cookbook-mongodb.herokuapp.com/).
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
-### Media
-- The photos used in this site were obtained from ...
+- The background photo on all pages of this website was copied from [Background photo](https://image.freepik.com/foto-gratis/barras-de-chocolate-oscuro-con-granos-de-cacao-en-la-mesa-de-madera_23-2147873730.jpg).
+- The photo on the home text section of this website was copied from [Home photo](https://image.freepik.com/free-photo/fresh-chocolate-mini-cakes_23-2147896378.jpg).
+- The health benefits text on the home page text section of this website was copied from [About health benefits](https://www.webmd.com/diet/a-z/raw-foods-diet).
+- The photo on the recipes page of this website was copied from [Recipes photo](https://image.freepik.com/free-photo/melted-chocolate-bowl-and-crushed-bar-on-chopping-board-with-wooden-spoon_23-2147867190.jpg).
+- The Recipes for this website were copied from [Recipes](http://rawfoodrecipes.com/).
 
 ### Acknowledgements
+- I received inspiration for this project from my personal interest in food for health. [Mark Sisson](https://www.marksdailyapple.com/) a Paleo and Ketogenic expert, has in particular commenced my interest in food for health.
+- For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
 
-- I received inspiration for this project from X
