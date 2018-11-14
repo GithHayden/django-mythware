@@ -168,3 +168,35 @@ The following section describes the process to deploy this project to Heroku.
 - I received inspiration for this project from my personal interest in food for health. [Mark Sisson](https://www.marksdailyapple.com/) a Paleo and Ketogenic expert, has in particular commenced my interest in food for health.
 - For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
 
+
+
+The project should include an authentication mechanism, allowing a user to register & login, and there should be a good reason as to why the users wouldhave to register to persist their shopping cart between sessions, otherwise it would be lost.
+The project will need to connect to a database (e.g. sqlite or Postgres) using Djangos ORM.
+
+Notes
+Front-end: Should contain Javascript to enhance the user experience. Implement Jasmine to test Javascript.
+Back-end: should integrate with 3rd party Python/Django packages, such as Django Rest Framework. Strive to use the best tool for each purpose and avoid reinventing the wheel.
+The project should include an authentication mechanism, allowing a user to register & login, and there should be a good reason as to why the users wouldhave to register to persist their shopping cart between sessions, otherwise it would be lost.
+The project will need to connect to a database (e.g. sqlite or Postgres) using Djangos ORM.
+
+
+Bugs
+Site not responsive - custom css for pricing knocked out Bootstrap responsive - updated custom css to remve body css and add .container .column margin.
+Bootstrap naming conventions - update with custom for this template. Updated all on x files via Replace all and updating file names.
+Sign Up - Error = Exception Type: NoReverseMatch at /accounts/register/. Exception Value: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
+raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
+auth pages/accounts not styling as required - bootstrap cdn link was from bootstrap. Updated with eneral bootstrap styling link.
+
+** Include all technoligies and libraries **
+sudo pip3 install django-forms-bootstrap
+sudo pip3 install Pillow
+sudo pip3 install stripe
+
+
+Add Blog
+
+url(r'^$', get_homepage),
+
+
