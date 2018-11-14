@@ -188,6 +188,7 @@ Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 ins
 raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
 Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
 auth pages/accounts not styling as required - bootstrap cdn link was from bootstrap. Updated with eneral bootstrap styling link.
+OPEN BUG - Update to have homepage and products as seperate apps for more streamlined build?
 
 ** Include all technoligies and libraries **
 sudo pip3 install django-forms-bootstrap
