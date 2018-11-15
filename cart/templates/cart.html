@@ -31,11 +31,10 @@
     {% endfor %}
 </div>
 
-
 <div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" style="font-size:10px" aria-hidden="true"></span> {{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
+    <p><span style="font-size:10px" aria-hidden="true"></span> € {{ total }}</p>
 </div>
-
+<div class="row">
+<a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
+</div>
 {% endblock %}
