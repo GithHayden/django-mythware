@@ -190,6 +190,7 @@ Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must
 auth pages/accounts not styling as required - bootstrap cdn link was from bootstrap. Updated with eneral bootstrap styling link.
 OPEN - Update to have homepage and products as seperate apps for more streamlined build?
 Password reset - fix.
+Update styling on all message eg - you have succesfully logged in.
 
 ** Include all technoligies and libraries **
 sudo pip3 install django-forms-bootstrap
