@@ -191,6 +191,7 @@ auth pages/accounts not styling as required - bootstrap cdn link was from bootst
 OPEN - Update to have homepage and products as seperate apps for more streamlined build?
 Password reset - fix.
 Update styling on all message eg - you have succesfully logged in.
+Remove image func from products or keep for future iterations?
 
 ** Include all technoligies and libraries **
 sudo pip3 install django-forms-bootstrap
