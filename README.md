@@ -194,8 +194,9 @@ Update styling on all message eg - you have succesfully logged in.
 Remove image func from products or keep for future iterations?
 Build in link for payment to populate in issues tracker?
 Populate Profile with more details.
+Populate Features into homepage.
 
-** Include all technoligies and libraries **
+** Include all technologies and libraries **
 sudo pip3 install django-forms-bootstrap
 sudo pip3 install Pillow
 sudo pip3 install stripe
