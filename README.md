@@ -200,6 +200,4 @@ https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 Include all libraries, eg from django import forms
 
 
-
-
 url(r'^$', get_homepage),
