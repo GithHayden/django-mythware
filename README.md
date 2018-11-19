@@ -192,6 +192,8 @@ OPEN - Update to have homepage and products as seperate apps for more streamline
 Password reset - fix.
 Update styling on all message eg - you have succesfully logged in.
 Remove image func from products or keep for future iterations?
+Build in link for payment to populate in issues tracker?
+Populate Profile with more details.
 
 ** Include all technoligies and libraries **
 sudo pip3 install django-forms-bootstrap
@@ -199,9 +201,10 @@ sudo pip3 install Pillow
 sudo pip3 install stripe
 https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 
+Include all libraries, eg from django import forms
+
 
 Add Blog
+Add Features area
 
 url(r'^$', get_homepage),
-
-
