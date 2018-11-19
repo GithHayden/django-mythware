@@ -169,10 +169,6 @@ The following section describes the process to deploy this project to Heroku.
 - For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
 
 
-
-The project should include an authentication mechanism, allowing a user to register & login, and there should be a good reason as to why the users wouldhave to register to persist their shopping cart between sessions, otherwise it would be lost.
-The project will need to connect to a database (e.g. sqlite or Postgres) using Djangos ORM.
-
 Notes
 Front-end: Should contain Javascript to enhance the user experience. Implement Jasmine to test Javascript.
 Back-end: should integrate with 3rd party Python/Django packages, such as Django Rest Framework. Strive to use the best tool for each purpose and avoid reinventing the wheel.
@@ -194,9 +190,8 @@ Update styling on all message eg - you have succesfully logged in.
 Remove image func from products or keep for future iterations?
 Build in link for payment to populate in issues tracker?
 Populate Profile with more details.
-Populate Features into homepage.
+Populate Blog.
 
-** Include all technologies and libraries **
 sudo pip3 install django-forms-bootstrap
 sudo pip3 install Pillow
 sudo pip3 install stripe
@@ -205,7 +200,6 @@ https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 Include all libraries, eg from django import forms
 
 
-Add Blog
-Add Features area
+
 
 url(r'^$', get_homepage),
