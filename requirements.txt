@@ -7,7 +7,6 @@ keyring==3.5
 lazr.uri==1.0.3
 lockfile==0.8
 oauth==1.0.1
-python-apt==0.9.3.5ubuntu2
 requests==2.20.0
 simplejson==3.3.1
 six==1.5.2
