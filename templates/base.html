@@ -49,11 +49,10 @@
         </div>
     </nav>
 
-    <section id="about">
+    <section>
         <div class="container">
             {% if messages %}
-            <div>
-                <div class="alert alert-warning text-center">
+                <div class="alert alert-success">
                     {% for message in messages %} {{ message }} {% endfor %}
                 </div>
             </div>

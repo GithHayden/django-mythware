@@ -23,7 +23,7 @@ Remove image func from products or keep for future iterations?
 Build in link for payment to populate in issues tracker
 User Signs Up/Signs In - bring them to their profile page
 Implement Blog.
-Add Automated Testing/Travis - Integrated Testing
+Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating.
 sudo pip3 install django-forms-bootstrap
 sudo pip3 install Pillow
 sudo pip3 install stripe
