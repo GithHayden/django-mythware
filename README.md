@@ -18,6 +18,7 @@ auth pages/accounts not styling as required - bootstrap cdn link was from bootst
 OPEN - Update to have homepage and products as seperate apps for more streamlined build?
 Password reset - fix.
 Bug = Update when user signs up or signs in, user is brough to the profile page and not the homepage.
+Bug - Stripe payment not processing.
 Update styling on all message eg - you have succesfully logged in.
 Remove image func from products or keep for future iterations?
 Build in link for payment to populate in issues tracker
