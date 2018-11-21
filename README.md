@@ -1,11 +1,8 @@
 [![Build Status](https://travis-ci.org/GithHayden/django-mythware.svg?branch=master)](https://travis-ci.org/GithHayden/django-mythware)
 
-
-
 # Mythware
 
 Mythware is an agile project management software application.
-
 
 Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
 Site not responsive - custom css for pricing knocked out Bootstrap responsive - updated custom css to remve body css and add .container .column margin.

@@ -59,23 +59,19 @@
     </nav>
 
     <section>
-        <div class="col-lg-8 mx-auto mb-n3 text-center">
-
-            {% if messages %}
-            <div>
-                <div class="alert alert-warning text-center">
-                    {% for message in messages %} {{ message }} {% endfor %}
-                </div>
+        {% if messages %}
+        <div>
+            <div class="alert alert-success">
+                {% for message in messages %} {{ message }} {% endfor %}
             </div>
-            {% endif %}
-            <br>
-            <div class="container">
-
-                {% block content %}
-                <i class="fa fa-sign-in fa-3x mb-3"></i>
-                <p class="lead text-center w-75 m-auto">You are logged in as {{ user.email }} </p>
-                {% endblock %}
-            </div>
+        </div>
+        {% endif %}
+        <br>
+        <div class="container text-center">
+            {% block content %}
+            <i class="fa fa-sign-in fa-3x mb-3"></i>
+            <p class="lead text-center w-75 m-auto">You are logged in as {{ user.email }} </p>
+            {% endblock %}
         </div>
     </section>
 
