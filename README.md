@@ -21,6 +21,7 @@ Bug = Update when user signs up or signs in, user is brough to the profile page 
 Update styling on all message eg - you have succesfully logged in.
 Remove image func from products or keep for future iterations?
 Build in link for payment to populate in issues tracker
+User Signs Up/Signs In - bring them to their profile page
 Implement Blog.
 Add Automated Testing/Travis - Integrated Testing
 sudo pip3 install django-forms-bootstrap
