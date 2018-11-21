@@ -51,17 +51,15 @@
 
     <section id="about">
         <div class="container">
-            <div class="row">
-                {% if messages %}
-                <div>
-                    <div class="text-center">
-                        {% for message in messages %} {{ message }} {% endfor %}
-                    </div>
+            {% if messages %}
+            <div>
+                <div class="alert alert-warning text-center">
+                    {% for message in messages %} {{ message }} {% endfor %}
                 </div>
-                {% endif %}
-                <div class="container">
-                    <br> {% block content %} {% endblock %}
-                </div>
+            </div>
+            {% endif %}
+            <div class="container">
+                <br> {% block content %} {% endblock %}
             </div>
         </div>
     </section>
