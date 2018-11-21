@@ -75,17 +75,16 @@
                     <h1>New Issue</h1>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %} {{ form | as_bootstrap }}
-                        <div class="alert alert-danger">
+                        <div class="alert alert-secondary">
                             <b>Note!</b> Upgrades will only be developed if you offer sufficient payment.
                         </div>
-                        <button type="submit" class="btn btn-info">Save</button>
+                        <button type="submit" class="btn btn-warning">Save</button>
                     </form>
                     {% endblock %}
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
