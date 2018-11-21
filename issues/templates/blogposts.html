@@ -65,18 +65,30 @@
 
         <div class="container">
             <div class="row border-bottom">
-
+            </div>
+        </div>
+        <div class="container">
+            <div class="row border-bottom border-left border-right" style="background-color:#f2f2f2">
+                <div class="col-1 my-auto text-center"><b>Title</b></div>
+                <div class="col-3 my-auto text-center"><b>Date Posted</b></div>
+                <div class="col-1 my-auto text-center"><b>Author</b></div>
+                <div class="col-2 my-auto text-center"><b>Issue Type</b></div>
+                <div class="col-1 my-auto text-center"><b>Amount Paid</b></div>
+                <div class="col-2 my-auto text-center"><b>Status</b></div>
+                <div class="col-2 my-auto text-center"><b>Issue Details</b></div>
             </div>
         </div>
 
         {% block content %} {% for post in posts %}
         <div class="container">
-            <div class="row border-bottom border-left border-right" style="height:40px">
-                <div class="col my-auto"><i class="fa fa-exclamation fa-1x mb-3 mr-2 my-auto" style="color:#00e600;"></i><b>{{ post.title }}</b></div>
-                <div class="col my-auto">{{ post.content|truncatewords:30 }}</div>
-                <div class="my-auto">{{ post.published_date }}</div>
-                <div class="col my-auto">{{post.views}}</div>
-                <div class="col my-auto"><a href="{% url 'post_detail' post.id %}" class="my-auto" ><b>Read More/Edit</b></a></div>
+            <div class="row border-bottom border-left border-right" style="height:50px">
+                <div class="col-1 my-auto text-center"><i class="fa fa-exclamation fa-1x mb-3 mr-2 my-auto" style="color:#00e600;"></i><b>{{ post.title }}</b></div>
+                <div class="col-3 my-auto text-center">{{ post.published_date }}</div>
+                <div class="col-1 my-auto text-center">{{ post.tag }}</div>
+                <div class="col-2 my-auto text-center"></div>
+                <div class="col-1 my-auto text-center">{{post.views}}</div>
+                <div class="col-2 my-auto text-center"></div>
+                <div class="col-2 my-auto text-center"><a href="{% url 'post_detail' post.id %}" class="my-auto" ><b>Read More/Edit</b></a></div>
             </div>
         </div>
         {% endfor %} {% endblock %}
