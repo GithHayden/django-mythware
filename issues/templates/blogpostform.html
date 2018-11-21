@@ -58,7 +58,7 @@
         </div>
     </nav>
 
-    <section id="about">
+    <section>
         <div class="container">
             <div class="row">
 
@@ -75,7 +75,7 @@
                     <h1>New Issue</h1>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %} {{ form | as_bootstrap }}
-                        <div class="alert alert-secondary">
+                        <div class="alert alert-danger">
                             <b>Note!</b> Upgrades will only be developed if you offer sufficient payment.
                         </div>
                         <button type="submit" class="btn btn-warning">Save</button>

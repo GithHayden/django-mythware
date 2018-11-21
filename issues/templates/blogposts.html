@@ -71,11 +71,12 @@
 
         {% block content %} {% for post in posts %}
         <div class="container">
-            <div class="row border-bottom" style="height:40px">
-                <div class="col my-auto"><i class="fa fa-exclamation fa-1x mb-3 mr-2 my-auto" style="color:#00e600;"></i><a href="{% url 'post_detail' post.id %}" class="my-auto" ><b>{{ post.title }}</b></a></div>
+            <div class="row border-bottom border-left border-right" style="height:40px">
+                <div class="col my-auto"><i class="fa fa-exclamation fa-1x mb-3 mr-2 my-auto" style="color:#00e600;"></i><b>{{ post.title }}</b></div>
                 <div class="col my-auto">{{ post.content|truncatewords:30 }}</div>
                 <div class="my-auto">{{ post.published_date }}</div>
                 <div class="col my-auto">{{post.views}}</div>
+                <div class="col my-auto"><a href="{% url 'post_detail' post.id %}" class="my-auto" ><b>Read More/Edit</b></a></div>
             </div>
         </div>
         {% endfor %} {% endblock %}

@@ -186,6 +186,8 @@ Blog.
 Add scroll or indexing to issues tracker.
 Add search to issues tracker.
 Add unique # or Ref. to each issue.
+Add upvotes.
+Add bugs complete per day, week, month with grpah/pie chart.
 
 Installations/Technologies
 sudo pip3 install django-forms-bootstrap
