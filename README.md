@@ -29,3 +29,5 @@ sudo pip3 install stripe
 https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 
 Include all libraries, eg from django import forms
+
+Travis error - use pip freeze, rather than pip3 freeze
