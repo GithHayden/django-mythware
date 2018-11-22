@@ -1,3 +1,5 @@
+// Boostrap scrolling-nav theme //
+
 (function($) {
   "use strict"; // Start of use strict
 

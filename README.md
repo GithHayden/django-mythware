@@ -170,8 +170,6 @@ The following section describes the process to deploy this project to Heroku.
 - For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
 
 
-
-
 Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
 Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
 Bug: auth pages/accounts not styling as required - bootstrap cdn link was from bootstrap. Updated with egneral bootstrap styling link.
@@ -180,7 +178,9 @@ Bug: Password reset.
 Bug: Stripe payment not processing. Fix - Will only process when deloyed?
 Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
 
+
 Future Features
+Add #Open #Closed.
 Remove image func from products or keep for future iterations?
 Blog.
 Add scroll or indexing to issues tracker.
@@ -188,6 +188,7 @@ Add search to issues tracker.
 Add unique # or Ref. to each issue.
 Add upvotes.
 Add bugs complete per day, week, month with grpah/pie chart.
+Update coding naming conventions from copied code, to suit this template, eg updae blog to issue everywhere.
 
 Installations/Technologies
 sudo pip3 install django-forms-bootstrap

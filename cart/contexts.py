@@ -4,7 +4,7 @@ from products.models import Product
 
 def cart_contents(request):
     """
-    Ensures that the cart contents are available when rendering every page
+    Ensures that the cart contents persists when user renders every page
     """
     
     cart = request.session.get('cart', {})

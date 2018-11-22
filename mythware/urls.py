@@ -21,7 +21,6 @@ from products.views import all_products
 from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from django.views.generic import RedirectView
-from django.views.static import serve
 from django.views import static
 from .settings import MEDIA_ROOT
 

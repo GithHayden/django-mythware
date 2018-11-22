@@ -20,7 +20,7 @@ def logout(request):
 
 
 def login(request):
-    """A view that manages the login form"""
+    """A view that manages the signin form"""
     if request.method == 'POST':
         user_form = UserLoginForm(request.POST)
         if user_form.is_valid():
@@ -42,7 +42,7 @@ def login(request):
         user_form = UserLoginForm()
 
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
-    return render(request, 'login.html', args)
+    return render(request, 'signin.html', args)
 
 
 @login_required
@@ -52,7 +52,7 @@ def profile(request):
 
 
 def register(request):
-    """A view that manages the registration form"""
+    """A view that manages the signup form"""
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
         if user_form.is_valid():
@@ -72,4 +72,4 @@ def register(request):
         user_form = UserRegistrationForm()
 
     args = {'user_form': user_form}
-    return render(request, 'register.html', args)
+    return render(request, 'signup.html', args)

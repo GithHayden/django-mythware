@@ -1,5 +1,8 @@
+<!-- Checkout page, allows user to process cart items via Stripe API payment method. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+
 {% extends "base.html" %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block head_js %}
 
+<!-- Stripe Payment. -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     //<![CDATA[
@@ -9,6 +12,7 @@
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %} {% block content %}
 
+<!-- Cart Items. -->
 <div class="content-md container">
     <div class="row">
         {% for item in cart_items %}
@@ -44,6 +48,7 @@
     <strong><p><span style="font-size:20px" aria-hidden="true"> TOTAL € {{ total }}</p></span></strong>
 </div>
 
+<!-- Payment Form. -->
 <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
     <legend>Payment Details</legend>
     <div id="credit-card-errors" style="display:none">

@@ -1,0 +1,16 @@
+<!-- User signin page, for user to signin and activate their account. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+
+{% extends "base.html" %} {% load bootstrap_tags %} {% block content %}
+
+<!-- Bootstrap styled frorm for user to signin to their account. -->
+<form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
+    <fieldset class="form-group">
+        <legend>Sign In</legend>
+        {% csrf_token %} {{ user_form | as_bootstrap }}
+
+        <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+
+        <button type="submit" class="btn btn-warning">Sign In</button>
+    </fieldset>
+</form>
+{% endblock %}

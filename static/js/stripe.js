@@ -1,3 +1,5 @@
+// Stripe API Payment Processing. //
+
 $(function() {
     $("#payment-form").submit(function() {
         var form = this;

@@ -1,0 +1,15 @@
+<!-- User signup page, for user to signup and activate their account. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+
+
+{% extends "base.html" %} {% load bootstrap_tags %} {% block content %}
+
+<!-- Bootstrap styled form for user to signup and create an account. -->
+<form method="post" action="{% url 'register' %}" class="accountform">
+    <fieldset class="form-group">
+        <legend>Create a new account</legend>
+        <p>Already got an account? <a href="{% url 'login' %}">Sign In</a></p>
+        {% csrf_token %} {{ user_form | as_bootstrap }}
+        <button type="submit" class="btn btn-warning">Sign Up</button>
+    </fieldset>
+</form>
+{% endblock %}

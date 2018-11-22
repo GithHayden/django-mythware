@@ -1,3 +1,5 @@
+<!-- Issues Tracker page, allows user to view/track all issues logged. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+
 {% load staticfiles %} {% load bootstrap_tags %}
 
 <!DOCTYPE html>
@@ -12,10 +14,10 @@
 
     <title>Mythware</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS. -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Bootstrap and Developer Custom styles for this template. -->
     <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
 
@@ -23,7 +25,7 @@
 
 <body id="page-top">
 
-    <!-- Navigation -->
+    <!-- Navigation Menu. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
@@ -57,10 +59,15 @@
         </div>
     </nav>
 
+    <!-- Issues Tracker. -->
     <section>
         <div class="mx-auto text-center">
             <i class="fa fa-exclamation fa-3x mb-3"></i>
             <h2 class="mb-5">Issues Tracker</h2>
+        </div>
+
+        <div class="container alert alert-danger">
+            <b>Note!</b> Upgrades will only be developed if you make a sufficient payment. 50% of developers time will be spent on the highest paid upgrade requests.
         </div>
 
         <div class="container">
@@ -88,20 +95,20 @@
                 <div class="col-2 my-auto text-center"></div>
                 <div class="col-1 my-auto text-center">{{post.views}}</div>
                 <div class="col-2 my-auto text-center"></div>
-                <div class="col-2 my-auto text-center"><a href="{% url 'post_detail' post.id %}" class="my-auto" ><b>Read More/Edit</b></a></div>
+                <div class="col-2 my-auto text-center"><a href="{% url 'post_detail' post.id %}" class="my-auto"><b>Read More/Edit</b></a></div>
             </div>
         </div>
         {% endfor %} {% endblock %}
     </section>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap Core JavaScript. -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-    <!-- Plugin JavaScript -->
+    <!-- Bootstrap Plugin JavaScript. -->
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-    <!-- Custom JavaScript for this theme -->
+    <!-- Boostrap Custom JavaScript for this theme. -->
     <script src="{% static 'js/scrolling-nav.js' %}"></script>
 
 </body>

@@ -1,3 +1,5 @@
+<!-- Issues Form page, allows user to log/save a new issue. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+
 {% load staticfiles %} {% load bootstrap_tags %}
 
 <!DOCTYPE html>
@@ -12,10 +14,10 @@
 
     <title>Mythware</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS. -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Bootstrap and Developer Custom styles for this template. -->
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
     <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"> {% block head_js %} {% endblock head_js %}
@@ -24,7 +26,7 @@
 
 <body id="page-top">
 
-    <!-- Navigation -->
+    <!-- Navigation Menu. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
@@ -58,10 +60,10 @@
         </div>
     </nav>
 
+    <!-- Issues Form. -->
     <section>
         <div class="container">
             <div class="row">
-
                 {% if messages %}
                 <div>
                     <div>
@@ -70,13 +72,12 @@
                 </div>
                 {% endif %}
                 <div class="container">
-
                     {% block content %}
                     <h1>New Issue</h1>
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %} {{ form | as_bootstrap }}
                         <div class="alert alert-danger">
-                            <b>Note!</b> Upgrades will only be developed if you offer sufficient payment.
+                            <b>Note!</b> Upgrades will only be developed if you make a sufficient payment.
                         </div>
                         <button type="submit" class="btn btn-warning">Save</button>
                     </form>
@@ -86,14 +87,14 @@
         </div>
     </section>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap Core JavaScript. -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-    <!-- Plugin JavaScript -->
+    <!-- Bootstrap Plugin JavaScript. -->
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-    <!-- Custom JavaScript for this theme -->
+    <!-- Bootstrap Custom JavaScript for this theme. -->
     <script src="{% static 'js/scrolling-nav.js' %}"></script>
 
 </body>

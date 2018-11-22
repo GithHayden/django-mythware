@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     """
-    A single issue that is posted by a user
+    A single issue that is posted by a user.
     """
     title = models.CharField(max_length=200)
     content = models.TextField()
