@@ -179,17 +179,15 @@ AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed
 Features to Implement
 Add #Open #Closed.
 Remove image func from products or keep for future iterations?
-Blog.
+Add Blog.
 Add scroll or indexing to issues tracker.
 Add search to issues tracker.
 Add unique # or Ref. to each issue.
 Add upvotes.
-Add bugs complete per day, week, month with grpah/pie chart.
-Update coding naming conventions from copied code, to suit this template, eg updae blog to issue everywhere.
+Add bugs complete per day, week, month with graph/pie chart.
+Update coding naming conventions from copied code, to suit this template, eg update blog to issue everywhere.
 Update to have homepage and products as seperate apps for more streamlined build?
 Automated testing.
-Remove obsolete code from issues. Update naming from blog to issues.
-Add hover guidance messages for user eg on issue tracker or pre-filled fields as examples.
 Issues Tracker - Status Field = color code per status type.
 
 Installations/Technologies

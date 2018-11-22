@@ -78,7 +78,7 @@
                 <div class="container bg-color-sky-light m-5">
                     {% block content %}
                     <div class="row ml-5 mr-5 mt-5 mb-2">
-                        <div class="col-xs-9">
+                        <div class="col-xs-9 mb-3">
                             <h3>{{ post.title }}</h3><span class="boldtext"><b>Date Posted: </b></span> {{ post.published_date }}
                         </div>
                     </div>
@@ -87,13 +87,11 @@
                         <div class="col-xs-9">
                             <p> <b>Details: </b>{{ post.details }}</p>
                             <p><span class="boldtext"><b>Author: </b></span> {{post.author}}<b>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Type: </b></span> {{ post.issue_type }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <b>Amount Paid: </b></span>€ {{ post.amount_paid }}</p>
-                            <p><span class="boldtext"><b>Status: </b></span> {{ post.status }}</p>
-
-
-                            <a href="{% url 'get_posts' %}" class="btn btn-secondary">Back To Issues</a>
-                            <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Edit Issue</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Type: </b></span> {{ post.issue_type }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <b>Amount Paid: </b></span>€ {{ post.amount_paid }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <b>Status: </b><span class="badge badge-dark mb-3 mt-3">{{ post.status }}</p>
+                            <a href="{% url 'get_posts' %}" class="btn btn-secondary mr-3">Back To Issues</a>
+                            <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Edit Issue</a></span>
                         </div>
                     </div>
                 </div>
