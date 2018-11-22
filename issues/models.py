@@ -7,12 +7,14 @@ class Post(models.Model):
     A single issue that is posted by a user.
     """
     title = models.CharField(max_length=200)
-    content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True,
                                           default=timezone.now)
-    views = models.IntegerField(default=0)
-    tag = models.CharField(max_length=30, blank=True, null=True)
+    author = models.CharField(max_length=30, blank=True, null=True)
+    issue_type = models.CharField(max_length=30, blank=True, null=True)
+    amount_paid = models.CharField(max_length=30, blank=True, null=True)
+    status = models.CharField(max_length=30, blank=True, null=True)
+    details = models.TextField()
 
     def __unicode__(self):
         return self.title

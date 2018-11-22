@@ -172,14 +172,13 @@ The following section describes the process to deploy this project to Heroku.
 
 Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
 Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
-Bug: auth pages/accounts not styling as required - bootstrap cdn link was from bootstrap. Updated with egneral bootstrap styling link.
-Bug: Update to have homepage and products as seperate apps for more streamlined build?
-Bug: Password reset.
-Bug: Stripe payment not processing. Fix - Will only process when deloyed?
+Bug: OPEN = Password reset.
+Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
 Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
+TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
+AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
 
-
-Future Features
+Features to Implement
 Add #Open #Closed.
 Remove image func from products or keep for future iterations?
 Blog.
@@ -189,10 +188,14 @@ Add unique # or Ref. to each issue.
 Add upvotes.
 Add bugs complete per day, week, month with grpah/pie chart.
 Update coding naming conventions from copied code, to suit this template, eg updae blog to issue everywhere.
+Update to have homepage and products as seperate apps for more streamlined build?
+Automated testing.
+Remove obsolete code from issues. Update naming from blog to issues.
+Add hover guidance messages for user eg on issue tracker or pre-filled fields as examples.
 
 Installations/Technologies
 sudo pip3 install django-forms-bootstrap
 sudo pip3 install Pillow
 sudo pip3 install stripe
 https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
-Include all libraries/requirements.txt, eg from django import forms
+
