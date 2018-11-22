@@ -22,7 +22,7 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True,
                                           default=timezone.now)
     author = models.CharField(max_length=30, blank=True, null=True)
-    issue_type = models.CharField(max_length=6, choices=ISSUE, default='Free')
+    issue_type = models.CharField(max_length=7, choices=ISSUE, default='Free')
     amount_paid = models.CharField(max_length=30, blank=True, null=True)
     status = models.CharField(max_length=6, choices=STATUS, default='Open')
     details = models.TextField()

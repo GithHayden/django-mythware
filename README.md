@@ -180,6 +180,7 @@ Features to Implement
 Add #Open #Closed.
 Remove image func from products or keep for future iterations?
 Add Blog.
+Add Sort to Issues Tracker.
 Add scroll or indexing to issues tracker.
 Add search to issues tracker.
 Add unique # or Ref. to each issue.
