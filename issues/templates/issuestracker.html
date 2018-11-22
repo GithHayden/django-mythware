@@ -93,7 +93,7 @@
                 <div class="col-3 my-auto text-center">{{ post.published_date }}</div>
                 <div class="col-2 my-auto text-center">{{ post.author }}</div>
                 <div class="col-1 my-auto text-center">{{ post.issue_type }}</div>
-                <div class="col-1 my-auto text-center">{{ post.amount_paid }}</div>
+                <div class="col-1 my-auto text-center">€ {{ post.amount_paid }}</div>
                 <div class="col-1 my-auto text-center">{{ post.status }}</div>
                 <div class="col-2 my-auto text-center"><a href="{% url 'post_detail' post.id %}" class="my-auto"><b>Read More/Edit</b></a></div>
             </div>

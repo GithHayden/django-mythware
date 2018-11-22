@@ -4,8 +4,6 @@
 
 Mythware is an agile project management software application.
 
-# Raw Dessert Recipes
-
 This is a Raw Dessert Recipes website, built using **Flask**, a Python micro-framework. It is a data-driven application, and the target audience is any user who would like to easily access, add new, update and delete recipes.
 
 ## UX
@@ -192,6 +190,7 @@ Update to have homepage and products as seperate apps for more streamlined build
 Automated testing.
 Remove obsolete code from issues. Update naming from blog to issues.
 Add hover guidance messages for user eg on issue tracker or pre-filled fields as examples.
+Issues Tracker - Status Field = color code per status type.
 
 Installations/Technologies
 sudo pip3 install django-forms-bootstrap
