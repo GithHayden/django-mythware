@@ -2,7 +2,7 @@
 
 # Mythware
 
-Mythware is an agile project management software application, developed using **Django**, a Python web framework. The target audience is any user/team who would like to use project management software (application fictious for purpose of this project), to manage projects. Mythware provides user authentication, which allows users access to an issues tracker to request free bug fixes or paid upgrades.
+Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user/team who would like to use project management software (application fictious for purpose of this project), to manage projects. Mythware provides user authentication, allowing users to request free bug fixes or paid upgrades and monitor issues via an issues tracker.
 
 ## UX
 The following section describes the UX process for this project.
@@ -15,15 +15,14 @@ The following section describes the UX process for this project.
     2. **Navbar - Pricing** - As a user, I want to be able to easily access, update and delete recipes.
     3. **Navbar - Documentation** - As a user, I want to be able to add new recipes, to contribute to the database of recipes, for other users to access.
     4. **Navbar - Contact** - As a user, I want to be able to contact the website developers to offer feedback and suggestions.
-    5. **Navbar - Signup** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    6. **Navbar - Signin** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    5. **Navbar - Mythware** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
+    5. **Navbar - Sign Up** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    6. **Navbar - Sign In** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
     7. **Navbar - Cart** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
     8. **Navbar - Profile** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    9. **Navbar - Signout** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    9. **Navbar - Sign Out** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
     10. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
     11. **Navbar - New Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    12. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    13. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story.
 
 ## Features
@@ -38,16 +37,16 @@ The following section describes the front-end features in this project.
 5. **Footer - Social Links** - Provides users with links to the website social media pages (no current social media pages for this project as this is not a real business).
 
 ### Features to Implement
-1. **Recipe Authors** - Add a feature to include author registration and a separate page showing all recipe authors.
-2. **Blog** - Add a feature to include a blog page.
-3. **Recipe Image** - Add a feature to upload an image related to the recipe.
-4. **Recipe Details** - Add a feature to display recipe ingredients and instructions as lists.
-5. **Date picker** - Add a date picker into the 'Date Posted' field, to maintain the same date format throughout.
-6. **Search, Sort, Filter, Pagination** - Add these types of features to facilitate the recipe page as it increases in size.
-7. **Prep Time** - Add a feature to include prep time.
+1. **Blog** - Add a feature to include a blog page.
+2. **Issues Tracker - Status** - Add a feature for status color to auto change as satus is updated.
+3. **Issues, # Open and Closed** - As Tracker List grows add, search, sort, scroll/indexing, ID#, upvotes, # Open/Closed.
+
 
 ## Technologies Used
 The following section describes all technologies used to construct this project.
+
+
+django-forms-bootstrap, Pillow, Stripe API, Boostrap - https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
     - This project used **Cloud 9**, an online integrated development environment, to construct the code end to end.
@@ -84,6 +83,19 @@ The following section describes all technologies used to construct this project.
 
 ## Testing
 The following is an overview of testing to ensure all functionality works as intended in this project.
+
+
+Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
+Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
+Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
+Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
+Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
+Bug: TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
+Bug: AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
+Bug: Cart, checkout total and button not aligned / not responsive - wrapped div container around section.
+Bug: Issues Tracker Not Responsive, data overlaying - udated with correct bootstrap col grid layout for items to stack on smaller devices.
+Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
+
 
 1. **Navbar - Home**:
     1. Select 'Contact' on the navbar and move the user away from the home page.
@@ -173,34 +185,3 @@ The following section describes the process to deploy this project to Heroku.
 ### Acknowledgements
 - I received inspiration for this project from my personal interest in food for health. [Mark Sisson](https://www.marksdailyapple.com/) a Paleo and Ketogenic expert, has in particular commenced my interest in food for health.
 - For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
-
-
-Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
-Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
-Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
-Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
-Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
-Bug: TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
-Bug: AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
-Bug: Cart, checkout total and button not aligned / not responsive - wrapped div container around section.
-Bug: Issues Tracker Not Responsive, data overlaying - udated with correct bootstrap col grid layout for items to stack on smaller devices.
-Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
-
-Features to Implement
-Add #Open #Closed.
-Add Blog.
-Add Sort to Issues Tracker.
-Add scroll or indexing to issues tracker.
-Add search to issues tracker.
-Add unique # or Ref. to each issue.
-Add upvotes.
-Add bugs complete per day, week, month with graph/pie chart.
-Update coding naming conventions from copied code, to suit this template, eg update blog to issue everywhere.
-Update to have homepage and products as seperate apps for more streamlined build?
-Issues Tracker - Status Field = color code per status type.
-
-Installations/Technologies
-sudo pip3 install django-forms-bootstrap
-sudo pip3 install Pillow
-sudo pip3 install stripe
-https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
