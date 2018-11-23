@@ -252,6 +252,8 @@ sudo pip3 install gunicorn
 Procfile
 heroku config:set DISABLE_COLLECTSTATIC=1
 
+sudo pip3 install whitenoise - allows us to host our static files correctly on Heroku
+
 UNINSTALL boto3 & libraries not required?
 
 4. Push project to Heroku, using 'push -u heroku master' command.
