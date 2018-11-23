@@ -260,7 +260,7 @@ UNINSTALL boto3 & libraries not required?
 7. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
 8. From 'More' menu on the top right, select 'Restart all dynos'.
 9. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-10. Deployed via Heroku: [Mythware](#).
+10. Deployed via Heroku: [Mythware](https://mythware.herokuapp.com/).
 
 
 ## Credits
