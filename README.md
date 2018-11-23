@@ -170,7 +170,7 @@ The following section describes the process to deploy this project to Heroku.
 
 Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
 Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
-Bug: OPEN = Password reset.
+Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
 Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
 Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
 TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
@@ -178,6 +178,7 @@ AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed
 
 Features to Implement
 Add #Open #Closed.
+Stripe payment, update form to flow across two columns, rather than straight down.
 Remove image func from products or keep for future iterations?
 Add Blog.
 Add Sort to Issues Tracker.
