@@ -93,17 +93,7 @@ The following section describes all technologies used to develop this project.
 ## Testing
 The following is an overview of testing to ensure all functionality works as intended in this project.
 
-
-Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
-Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
-Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
-Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
-Bug: TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
-Bug: AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
-Bug: Cart, checkout total and button not aligned / not responsive - wrapped div container around section.
-Bug: Issues Tracker Not Responsive, data overlaying - udated with correct bootstrap col grid layout for items to stack on smaller devices.
-Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
-
+Test messages on each page
 
 
 1. **Homepage - Header**
@@ -116,46 +106,107 @@ Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
         - **Bug 1** - Browser error, 'django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty'.
             - **Issue** - Settings.py not updated.
             - **Fix** - Updated settings.py with if os.path.exists('env.py'): import env.
-        - **Bug 2** - When Get Started selected, pricing action not displayed.
+        - **Bug 2** - Browser Error, 'TemplateDoesNotExist at /accounts/login/''
+            - **Issue** - Commentary includes brackets which are being read as code.
+            - **Fix** - Removed brackets in commentary {% extends "base.html" %}.
+        - **Bug 3** - When Get Started selected, pricing action not displayed.
             - **Issue** - Pricing section id is not included.
             - **Fix** - Added id="pricing" to pricing section div.
 2. **Navbar - Features**
     1. Select 'Features' on the navbar.
     2. Verify navbar menu highlights.
-    3. Verify features section is displayed.
+    3. Verify the features section is displayed.
 3. **Navbar - Pricing**
-
-
-
+    1. Select 'Pricing' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the pricing section is displayed.
+    4. Select 'Log and track a new issue', and verify that the sign in page is displayed.
+    5. Select 'Mythware' to go back to the homepage.
+    6. Select 'Pricing' on the navbar.
+    7. Select the up and down arrow beside each product quantity.
+    8. Select add, and add each product to the cart.
+    9. Varify that a badge with a number is added beside the cart, displaying how many products are in the cart.
 4. **Navbar - Documentation**
     1. Select 'Documentation' on the navbar.
     2. Verify navbar menu highlights.
-    3. Verify features section is displayed.
+    3. Verify the documenation section is displayed.
     4. Select 'technical documenation' link.
-    5. Verify link works as intended. Placeholder link for this project therefore no documents will be displayed at this point.
+    5. Verify link works as intended. Placeholder link for this project, therefore no documents will be displayed at this point.
 5. **Navbar - Contact**
     1. Select 'Contact' on the navbar.
     2. Verify navbar menu highlights.
-    3. Verify features section is displayed.
+    3. Verify the contact section is displayed.
 6. **Navbar - Social Links**
     1. Select each social link.
-    2. Verify link works as intended. Placeholder links for this project therefore no social websites will be displayed at this point.
+    2. Verify link works as intended. Placeholder links for this project, therefore no social websites will be displayed at this point.
 7. **Navbar - Mythware**
     1. Select 'Mythware' on the navbar.
     2. Verify the homepage header is displayed.
-
-
 8. **Navbar - Sign Up**
+    1. Select 'Sign Up' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the sign up page with a sign up form is displayed.
+    4. Populate each form field with unique user information and select Sign Up.
+    5. Verify the homepage is displayed.
+    6. Verify the navbar menu changes on the left to now read Profile, Sign Out, Cart.
+    7. Select 'Sign Out' and verify that navbar changes back to Sign Up, Sign In, Cart.
+    8. Select 'Sign Up' on the navbar.
+    9. Select 'sign in' link on the Sign In page.
+    10. Verify Sign In page is displayed.
 9. **Navbar - Sign In**
+    1. Select 'Mythware' to move away from the Sign In page.
+    2. Select 'Sign In' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the sign in page with a sign up form is displayed.
+    4. Populate each form field with unique user information and select Sign In.
+    5. Verify the homepage is displayed.
+    6. Verify the navbar menu changes on the left to now read Profile, Sign Out, Cart.
+    7. Select 'Sign Out' on the navbar.
+    8. Select 'Sign In' on the navbar.
+    9. Select 'Forgot my password' link on the sign in page.
+    10. Verify a page displaying a form is displayed to input email address.
+    11. Input email address from the account created and select reset password.
+    12. Verify reset password sends an email.
+    13. Populate each form field and select 'Submit Payment'.
+        - **Bug 1** - Browser Error, 'ConnectionRefusedError at /accounts/password-reset/.'
+            - **Issue** - OPEN.
+            - **Fix** - OPEN.
 10. **Navbar - Cart**
+    1. Select 'Cart' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the cart page is displayed, with the total at €0 as there are no products in the cart.
+    4. Select 'Mythware' on the navbar.
+    5. Verify the homepage is displayed.
+    6. Select 'Pricing' on the navbar, add 2 products to the cart and select cart.
+    7. Verify the cart page displayed the correct products and quantities selected.
+    8. Select 'Profile' and 'Mythware' on the navbar and verify the cart persists over all pages.
+    8. Select 'Checkout' button and verify the checkout page with an order summary, displayin the total cost.
+    9. Verify a payment form is displayed.
+    10. Populate each form field and select 'Submit Payment'.
+        - **Bug 1** - Error, 'We were unable to take a payment with that card!'
+            - **Issue** - OPEN.
+            - **Fix** - OPEN.
 11. **Navbar - Profile**
 12. **Navbar - Sign Out**
 13. **Navbar - Issues**
+    1. Select...
+        - **Bug 1** - Browser Error, 'AttributeError at /issues/16/ | 'Post' object has no attribute 'views''
+            - **Issue** - Obsolete code included in Issues views.py.
+            - **Fix** - Removed post.views += 1 from issues views.py.
 14. **Navbar - New Issues**
 15. **Responsive Testing - All Device Sizes**:
     1. In Chrome, right click anywhere on the website and select 'inspect', to open the Chrome Dev tools.
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
     3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
+        - **Bug 1** - Cart page, checkout total and button not aligned/no responsive.
+            - **Issue** - Divs require updating.
+            - **Fix** - Wrapped section in div with container class.
+        - **Bug 2** - Issues Tracker not responsive, data over lapping each other.
+            - **Issue** - Bootstrap grid and layout requires updating.
+            - **Fix** - Updated div classes with boostrap col grid layout for items to stack on smaller devices.
+        - **Bug 3** - Issues Details no responsive, data skewed on smaller devices.
+            - **Issue** - Boostrap grid and layout requires updating.
+            - **Fix** - Updated div classes and margins.
 
 
 ## Deployment
