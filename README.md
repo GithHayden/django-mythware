@@ -4,6 +4,7 @@
 
 Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user who would like to manage projects. Mythware provides a user authentication feature, allowing users to request free bug fixes and paid upgrades via an issues tracker.
 
+
 ## UX
 The following section describes the UX process for this project.
 
@@ -25,6 +26,7 @@ The following section describes the UX process for this project.
     10. **Navbar - Issues** - As a user, I want to be able to view and track all issues. I also want to be able to click into each issue to view/edit the issues details.
     11. **Navbar - New Issues** - As a user, I want to be able to create a new issues that is added to the issues tracker.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story.
+
 
 ## Features
 
@@ -48,12 +50,12 @@ The following section describes the front-end features in this project.
 
 ### Features to Implement
 1. **Blog** - Add a feature to include a blog page.
-2. **Issues Tracker - Status** - Add a feature for status color to auto change as satus is updated.
+2. **Issues Tracker (Status)** - Add a feature for status color to auto change as satus is updated.
 3. **Issues Tracker** - Add search, sort, scroll/indexing, ID#, upvotes, # Open/Closed.
 
 
 ## Technologies Used
-The following section describes all technologies used to construct this project.
+The following section describes all technologies used to develop this project.
 
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
     - This project used **Cloud 9**, an online integrated development environment, to construct the code end to end.
@@ -87,12 +89,12 @@ The following section describes all technologies used to construct this project.
 - [All Other Technologies](https://startbootstrap.com/template-overviews/business-casual/)
     - All other technologies within this project were included with the Bootstrap template.
 
+
 ## Testing
 The following is an overview of testing to ensure all functionality works as intended in this project.
 
 
 Bug: Terminal 'run' = ImportError: No module named 'stripe'. Solution = sudo pip3 install stripe.
-Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty = updated settings.py with if os.path.exists('env.py'): import env
 Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
 Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
 Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
@@ -103,66 +105,58 @@ Bug: Issues Tracker Not Responsive, data overlaying - udated with correct bootst
 Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
 
 
-1. **Navbar - Home**:
+
+1. **Homepage - Header**
     1. Select 'Contact' on the navbar and move the user away from the home page.
-    2. Select 'Home' on the navbar.
-    3. Verify that 'Home' is highlighted on the navbar and that the user is moved to the home page.
-    4. Verify that the page header, footer, social links, image and text are displayed as intended.
-        - **Bug 1** - Application not rendering in the browser.
-            - **Issue** - app.py file `@app.route('add_recipe')` not correct.
-            - **Fix** - Added missing `/`, to `@app.route('/add_recipe')`.
-        - **Bug 2** - Application not rendering in the browser.
-            - **Issue** - Incorrectly spelled code as `{{ endfor }}`.
-            - **Fix** - Scanned all code. Updated code to `{% endfor %}`. 
-        - **Bug 3** - Home is not highlighted on the navbar.
-            - **Issue** - Overwrote bootstrap nav html tags, losing bootstrap div styling classes.
-            - **Fix** - Added `active` class to 'Home' navbar menu. Corrected on all navbar menu items, within each `html` file.
-2. **Navbar - Recipes**:
-    1. Select 'Recipes' on the navbar.
-    2. Verify that 'Recipes' is highlighted on the navbar and that the user is moved to the recipes page.
-    3. Verify that the page header, footer, social links and all recipes are displayed as intended.
-    4. Select 'View Recipe' and verify that the button is highlighted.
-    5. Verify that the user is brought to a new page and that all the recipe details are displayed as intended.
-    6. Select 'Update Recipe' and verify that the user is brought to a new page, where a form is displayed.
-    7. Verify that this form contains all of the recipe details, which can be updated and over-written.
-    8. Verify that a red alert box is displayed, guiding the user as intended. Select X on the alert box and verify that the message disappears.
-    9. Once the Recipe has been updated, select 'Update Recipe'.
-    10. Verify that the user is brought to the recipes page and that the updated recipe is added to this page.
-    11. Verify that the old recipe is still on the recipes page for the user to refer back to if required and for the user to delete once satisfied with their updated recipe.
-    12. Select 'View Recipe' on the newly updated/added recipe.
-    13. Verify that the user is brought to a new page and that the recipes details are displayed.
-    14. Verify that a red alert box is displayed, guiding the user as intended. Select X on the alert box and verify that the message disappears.
-    15. Select 'Delete Forever'. Verify that the user is brought to the recipe page and that the recipe is deleted.
-        - **Bug 1** - Recipe cards not aligning vertically.
-            - **Issue** - The html `divs` require adjusting.
-            - **Fix** - Added `<div style="text-align: center">`.
-        - **Bug 2** - No spacing between the recipe cards.
-            - **Issue** - Recipe cards require margin styling.
-            - **Fix** - Added Bootstrap spacing classes i.e. mt and mb, to the relevant `divs`.
-        - **Bug 3** - Recipe cards are not all the same height.
-            - **Issue** - Recipe card sizes only stretching as far as the recipe description text, rather than aligning with the height of that `div` row.
-            - **Fix** - Added `d-flex align-items-stretch` to the relevant `div`.
-        - **Bug 4** - Recipe card buttons displaying randomly, rather than aligned at the end of each card.
-            - **Issue** - Card sizes only stretching as far as the recipe description text, rather than aligning with the design of that div row.
-            - **Fix** - Moved the button, down a `div`.
-3. **Navbar - New Recipes**:
-    1. Select 'New Recipes' on the navbar.
-    2. Verify that 'New Recipes' is highlighted on the navbar and that the user is moved to the new recipes page.
-    3. Verify that the page header, footer, social links and a blank form are displayed as intended.
-    5. Leave all form fields blank and select 'Add Recipe'. Verify that the user is required to populate all fields before a new recipe can be added.
-    6. Input dummy data into each form field. Select 'Add Recipe'. Verify that the user is brought to the recipes page and that the new recipe is added.
-        - **Bug 1** - Date posted field is populating but not displaying when the recipe is added to the recipes page.
-            - **Issue** - Incorrectly spelled `{{recipe.posted_date}}`.
-            - **Fix** - Updated to `{{recipe.date_posted}}`, as the words were the incorrect way around.
-4. **Navbar - Contact**:
+    2. Select 'Mythware' on the navbar.
+    3. Verify that the header section is displayed.
+    4. Select 'Get Started' button.
+    5. Verify that the button is highligted when hoovered.
+    6. Verify that a scrolling action happens and that the pricing section is displayed.
+        - **Bug 1** - Browser error, 'django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty'.
+            - **Issue** - Settings.py not updated.
+            - **Fix** - Updated settings.py with if os.path.exists('env.py'): import env.
+        - **Bug 2** - When Get Started selected, pricing action not displayed.
+            - **Issue** - Pricing section id is not included.
+            - **Fix** - Added id="pricing" to pricing section div.
+2. **Navbar - Features**
+    1. Select 'Features' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify features section is displayed.
+3. **Navbar - Pricing**
+
+
+
+4. **Navbar - Documentation**
+    1. Select 'Documentation' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify features section is displayed.
+    4. Select 'technical documenation' link.
+    5. Verify link works as intended. Placeholder link for this project therefore no documents will be displayed at this point.
+5. **Navbar - Contact**
     1. Select 'Contact' on the navbar.
-    2. Verify that 'Contact' is highlighted on the navbar and that the user is moved to the contact page.
-    3. Verify that the page header, footer, social links and a blank form are displayed as intended.
-    5. Input dummy data into each form field. Select Submit, button highlighted but no further action happens. (This contact page is not currently wired up to an email account as this is not a real business.)
-5. **Responsive Testing**:
+    2. Verify navbar menu highlights.
+    3. Verify features section is displayed.
+6. **Navbar - Social Links**
+    1. Select each social link.
+    2. Verify link works as intended. Placeholder links for this project therefore no social websites will be displayed at this point.
+7. **Navbar - Mythware**
+    1. Select 'Mythware' on the navbar.
+    2. Verify the homepage header is displayed.
+
+
+8. **Navbar - Sign Up**
+9. **Navbar - Sign In**
+10. **Navbar - Cart**
+11. **Navbar - Profile**
+12. **Navbar - Sign Out**
+13. **Navbar - Issues**
+14. **Navbar - New Issues**
+15. **Responsive Testing - All Device Sizes**:
     1. In Chrome, right click anywhere on the website and select 'inspect', to open the Chrome Dev tools.
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
     3. Test how the website is rendering on each device size from Galaxy S5 to iPad Pro.
+
 
 ## Deployment
 The following section describes the process to deploy this project to Heroku.
@@ -176,9 +170,10 @@ The following section describes the process to deploy this project to Heroku.
 6. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
 7. From 'More' menu on the top right, select 'Restart all dynos'.
 8. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-9. Deployed via Heroku: [Raw Dessert Recipes](https://cookbook-mongodb.herokuapp.com/).
+9. Deployed via Heroku: [Mythware](#).
+
 
 ## Credits
 
 ### Acknowledgements
-- For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
+- For the technical skills used in this project, I harnessed my own knowledge and the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
