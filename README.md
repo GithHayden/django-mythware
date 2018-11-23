@@ -93,9 +93,6 @@ The following section describes all technologies used to develop this project.
 ## Testing
 The following is an overview of testing to ensure all functionality works as intended in this project.
 
-Test messages on each page
-
-
 1. **Homepage - Header**
     1. Select 'Contact' on the navbar and move the user away from the home page.
     2. Select 'Mythware' on the navbar.
@@ -187,13 +184,39 @@ Test messages on each page
             - **Issue** - OPEN.
             - **Fix** - OPEN.
 11. **Navbar - Profile**
+    1. Select 'Profile' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the profile page is displayed, with the message 'You have successfully logged in.'
+    4. Verify a Profile section with the user email address is displayed.
+    5. Verify a Issue Logging and Tracking section is displayed.
+    6. Select the 'New issue' button.
+    7. Verify he new issue page is displayed.
 12. **Navbar - Sign Out**
+    1. Select 'Sign Out' on the navbar.
+    2. Verify navbar menu highlights.
+    3. Verify the homepage is displayed.
+    4. Select 'Sign In' on the navbar.
+    5. Verify the Sign In page is displayed, with the message 'You have successfully logged out.'
 13. **Navbar - Issues**
-    1. Select...
+    1. Select 'Sign In' on the navbar.
+    2. Sign In to account.
+    2. Select 'Profile' on the navbar.
+    3. Select 'Issues' on the navbar.
+    4. Verify the issues tracker page is displayed, listing all issues.
+    5. Select the issue and verify the issues details are displayed.
+    6. Select 'Edit issues', update the issue, select save and verify the issue was updated as expected.
+    7. Select 'Back to Issues', verify the Issues Tracker is displayed.
         - **Bug 1** - Browser Error, 'AttributeError at /issues/16/ | 'Post' object has no attribute 'views''
             - **Issue** - Obsolete code included in Issues views.py.
             - **Fix** - Removed post.views += 1 from issues views.py.
 14. **Navbar - New Issues**
+    1. Select 'New Issue' on the navbar.
+    2. Verify a New Issue form opens.
+    2. Populate all form fields and save the issue.
+    3. Verify the Issues Tracker is displayed and the new issue is added to the Issues Tracker.
+    4. Sign Out and Sign In as a new user.
+    5. Repeat steps 1 - 3 and verify the same Issues Tracker is displayed, with all users issues.
+    6. Select 'Sigh Out' and verify that the homepage is displayed.
 15. **Responsive Testing - All Device Sizes**:
     1. In Chrome, right click anywhere on the website and select 'inspect', to open the Chrome Dev tools.
     2. Select the toggle device icon at the top of the window, to open the responsive testing window.
@@ -207,7 +230,6 @@ Test messages on each page
         - **Bug 3** - Issues Details no responsive, data skewed on smaller devices.
             - **Issue** - Boostrap grid and layout requires updating.
             - **Fix** - Updated div classes and margins.
-
 
 ## Deployment
 The following section describes the process to deploy this project to Heroku.
