@@ -198,3 +198,19 @@ sudo pip3 install Pillow
 sudo pip3 install stripe
 https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 
+
+
+
+
+RESPONSIVE
+Fix Issues Tracker
+Fix Issues Details
+Fix Cart total and checkout button - wrapped around a container div
+Check all pages on all screen sizes
+
+
+
+
+
+
+

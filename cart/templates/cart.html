@@ -27,7 +27,7 @@
                             {% csrf_token %}
                             <div class="form-group">
                                 <div class="input-group">
-                                    <div class="input-group-addon mr-1">Qty =   </div>
+                                    <div class="input-group-addon mr-1">Qty = </div>
                                     <div class="input-group-addon"> {{item.quantity}}</div>
                                     <input name="quantity" type="number" min="0" max="999" class="form-control ml-2">
                                 </div>
@@ -42,10 +42,8 @@
     </div>
 </div>
 
-<div class="row">
-   <strong><p><span style="font-size:20px" aria-hidden="true"> TOTAL € {{ total }}</p></span></strong>
-</div>
-<div class="row">
+<div class="container">
+    <strong><p><span style="font-size:20px" aria-hidden="true"> TOTAL € {{ total }}</p></span></strong>
     <a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
 </div>
 {% endblock %}
