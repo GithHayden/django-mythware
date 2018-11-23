@@ -18,7 +18,6 @@
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Bootstrap and Developer Custom styles for this template. -->
-    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
     <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
 
@@ -61,44 +60,45 @@
     </nav>
 
     <!-- Issues Tracker. -->
-
     <section>
         <div class="mx-auto text-center">
             <i class="fa fa-exclamation fa-3x mb-3"></i>
             <h2 class="mb-5">Issues Tracker</h2>
         </div>
-        <div class="container mx-auto text-center alert alert-danger">
+
+        <div class="container alert alert-danger">
             <b>Note!</b> Upgrades will only be developed if you make a sufficient payment. 50% of developers time will be spent on the highest paid upgrade requests.
-        </div>
-        <div class="container bg-color-sky-light border">
-            <h4>Issues</h4>
         </div>
 
         <div class="container">
-            {% block content %} {% for post in posts %}
-
-            <div class="row border-bottom border-left border-right">
-                <div class="col-sm-3 my-1">
-                    <a href="{% url 'post_detail' post.id %}"><b>{{ post.title }}</a></b>
-                </div>
-                <div class="col-sm-3 my-1">
-                    <b></b>{{ post.published_date }}
-                </div>
-                <div class="col-sm-2 my-1">
-                    {{post.author}}
-                </div>
-                <div class="col-sm-2 my-1">
-                    {{ post.issue_type }}
-                </div>
-                <div class="col-sm-1 my-1">
-                    € {{ post.amount_paid }}
-                </div>
-                <div class="col-sm-1 my-1">
-                    <span class="badge badge-info">{{ post.status }}</span>
-                </div>
+            <div class="row border-bottom">
             </div>
-            {% endfor %} {% endblock %}
         </div>
+        <div class="container">
+            <div class="row border-bottom border-left border-right" style="background-color:#f2f2f2">
+                <div class="col-2 my-auto text-center"><b>Title</b></div>
+                <div class="col-3 my-auto text-center"><b>Date Posted</b></div>
+                <div class="col-2 my-auto text-center"><b>Author</b></div>
+                <div class="col-1 my-auto text-center"><b>Issue Type</b></div>
+                <div class="col-1 my-auto text-center"><b>Amount Paid</b></div>
+                <div class="col-1 my-auto text-center"><b>Status</b></div>
+                <div class="col-2 my-auto text-center"><b>Issue Details</b></div>
+            </div>
+        </div>
+
+        {% block content %} {% for post in posts %}
+        <div class="container">
+            <div class="row border-bottom border-left border-right" style="height:75px">
+                <div class="col-2 my-auto text-center"><i class="fa fa-exclamation fa-1x mb-3 mr-2 my-auto" style="color:red;"></i><b>{{ post.title }}</b></div>
+                <div class="col-3 my-auto text-center">{{ post.published_date }}</div>
+                <div class="col-2 my-auto text-center">{{ post.author }}</div>
+                <div class="col-1 my-auto text-center">{{ post.issue_type }}</div>
+                <div class="col-1 my-auto text-center">€ {{ post.amount_paid }}</div>
+                <div class="col-1 my-auto text-center badge badge-info">{{ post.status }}</div>
+                <div class="col-2 my-auto text-center"><a href="{% url 'post_detail' post.id %}" class="btn btn-secondary my-auto"><b>Read More</b></a></div>
+            </div>
+        </div>
+        {% endfor %} {% endblock %}
     </section>
 
     <!-- Bootstrap Core JavaScript. -->
