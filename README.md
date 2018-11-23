@@ -2,21 +2,28 @@
 
 # Mythware
 
-Mythware is an agile project management software application.
-
-This is a Raw Dessert Recipes website, built using **Flask**, a Python micro-framework. It is a data-driven application, and the target audience is any user who would like to easily access, add new, update and delete recipes.
+Mythware is an agile project management software application, developed using **Django**, a Python web framework. The target audience is any user/team who would like to use project management software (application fictious for purpose of this project), to manage projects. Mythware provides user authentication, which allows users access to an issues tracker to request free bug fixes or paid upgrades.
 
 ## UX
 The following section describes the UX process for this project.
 
 #### UX Process
-1. **Layout** - Reviewed the Code Institute learnings to date and Bootstrap themes to extract design ideas.
+1. **Layout** - Reviewed the Code Institute learnings to date, Bootstrap themes and GitHub to extract design ideas.
 2. **User Stories** - Walked through user stories.
-    1. **Navbar - Home** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
-    2. **Navbar - Recipes** - As a user, I want to be able to easily access, update and delete recipes.
-    3. **Navbar - New Recipes** - As a user, I want to be able to add new recipes, to contribute to the database of recipes, for other users to access.
+    1. **Homepage - Header** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
+    2. **Navbar - Features** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
+    2. **Navbar - Pricing** - As a user, I want to be able to easily access, update and delete recipes.
+    3. **Navbar - Documentation** - As a user, I want to be able to add new recipes, to contribute to the database of recipes, for other users to access.
     4. **Navbar - Contact** - As a user, I want to be able to contact the website developers to offer feedback and suggestions.
-    5. **Footer - Social Links** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    5. **Navbar - Signup** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    6. **Navbar - Signin** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    7. **Navbar - Cart** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    8. **Navbar - Profile** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    9. **Navbar - Signout** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    10. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    11. **Navbar - New Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    12. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    13. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story.
 
 ## Features
