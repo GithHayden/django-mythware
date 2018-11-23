@@ -2,13 +2,13 @@
 
 # Mythware
 
-Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user/team who would like to manage projects. Mythware provides a user authentication feature, allowing users to request free bug fixes and paid upgrades via an issues tracker.
+Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user who would like to manage projects. Mythware provides a user authentication feature, allowing users to request free bug fixes and paid upgrades via an issues tracker.
 
 ## UX
 The following section describes the UX process for this project.
 
 #### UX Process
-1. **Layout** - Reviewed the Code Institute education to date and Bootstrap themes to extract design ideas.
+1. **Layout** - Reviewed Code Institute education and Bootstrap themes to extract design ideas.
 2. **User Stories** - Walked through user stories.
     1. **Homepage - Header** - As a user, I want to be able to understand the purpose of this website and what to do next.
     2. **Navbar - Features** - As a user, I want to be able to understand the feaures of the software application.
@@ -49,29 +49,25 @@ The following section describes the front-end features in this project.
 ### Features to Implement
 1. **Blog** - Add a feature to include a blog page.
 2. **Issues Tracker - Status** - Add a feature for status color to auto change as satus is updated.
-3. **Issues, # Open and Closed** - As Tracker List grows add, search, sort, scroll/indexing, ID#, upvotes, # Open/Closed.
+3. **Issues Tracker** - Add search, sort, scroll/indexing, ID#, upvotes, # Open/Closed.
 
 
 ## Technologies Used
 The following section describes all technologies used to construct this project.
 
-
-django-forms-bootstrap, Pillow, Stripe API, Boostrap - https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
-
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
     - This project used **Cloud 9**, an online integrated development environment, to construct the code end to end.
+- [Django](https://www.djangoproject.com/)
+    - This project uses **Django**, a Python web-framework. Django's primary goal is to ease the creation of complex, database-driven websites. The framework emphasizes reusability and pluggability of components, less code, low coupling, rapid development, and the principle of don't repeat yourself.
 - [Bootstrap](https://getbootstrap.com/)
-    - This project used **Bootstrap**, a library of website themes. The [Business Casual Template](https://startbootstrap.com/template-overviews/business-casual/), was used for this project.
-        - **Static folder**: All files except the `custom.css`, `bg.jpg`,`intro.jpg` files, were copied from the bootstrap template.
+    - This project used **Bootstrap**, a library of website themes. The [Scrolling Nav Template](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav), was used for this project.
+        - **Static folder**: All files except the `custom.css` and `stripe.js` files, were copied from the bootstrap template.
         - **.html files**: All `.html` files used the bootstrap `.html` files as boiler plate code. The project developer then amended and built upon each of these files to suit this project.
-        - **gulpfile.js, package-lock.json, package.json files**: Each of these files were included with the bootstrap template.
         - **All Other Code**: Compiled by the project developer.
-- [Flask](http://flask.pocoo.org/)
-    - This project uses **Flask**, a Python micro-framework. It is classified as a microframework because it does not require particular tools or libraries.
-- [mLab](https://mlab.com/)
-    - This project uses **mLab**, a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers. The developer used an mLab sandbox DB, which is for learning and prototyping. Json value pairs were added into the mLab document to align with the recipe wireframe. For example, 'Recipe_Title: Title', is the json value pair within the mLab database for the Recipe Title.
-- [MongoDB](https://www.mongodb.com/)
-    - This project uses **mongoDB**, a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.
+- [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **Bootstrap Forms**, a library to allow quicker implementation of forms throughout the project.
+- [Stripe API](https://stripe.com/)
+    - This project uses **Stripe API**, which allows individuals and businesses to receive payments over the Internet
 - [Jinga](http://jinja.pocoo.org/)
     - This project uses **Jinja**, a template engine for Python, jinja code is included within the curly brackets.
 - [Python](https://www.python.org/)
