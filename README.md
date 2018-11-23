@@ -246,11 +246,13 @@ Copy Postrgres URL from Heroku, under Settings - Reveal Config Vars. Update env.
 python3 manage.py makemigrations - no changes detected. python3 manage.py migrate
 As this is a new empty DB, we need to create a new superusr. ython3 manage.py createsuperuser
 The sqlite db that we had, was just for testing, you are now going to have to now rebuild all the products. NOTE: PRIOR PRODUCTS ADDED WILL DISAPPEAR AT THIS STAGE.
-Serve your static files from Amazon AWS cloud server, that you can take a bit of space from - log into Amazon
-We'll have to update our code to use S3. sudo pip3 install django-storages - package that allows us to connect django to S3
-sudo pip3 install boto3 - package that allows us to connect django to S3
-sudo pip3 install gunicorn
+Update allowed hosts. ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), 'mythware.herokuapp.com']
 
+sudo pip3 install gunicorn
+Procfile
+heroku config:set DISABLE_COLLECTSTATIC=1
+
+UNINSTALL boto3 & libraries not required?
 
 4. Push project to Heroku, using 'push -u heroku master' command.
 5. Create scale, using 'heroku ps:scale web=1' command.
