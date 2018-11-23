@@ -6,9 +6,9 @@ def cart_contents(request):
     """
     Ensures that the cart contents persists when user renders every page
     """
-    
+
     cart = request.session.get('cart', {})
-    
+
     cart_items = []
     total = 0
     product_count = 0
@@ -16,6 +16,6 @@ def cart_contents(request):
         product = get_object_or_404(Product, pk=id)
         total += quantity * product.price
         product_count += quantity
-        cart_items.append({'id':id, 'quantity': quantity, 'product': product})
-        
-    return { 'cart_items': cart_items, 'total': total, 'product_count': product_count }
+        cart_items.append({'id': id, 'quantity': quantity, 'product': product})
+
+    return {'cart_items': cart_items, 'total': total, 'product_count': product_count}

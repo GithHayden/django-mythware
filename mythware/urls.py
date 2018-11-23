@@ -24,6 +24,7 @@ from django.views.generic import RedirectView
 from django.views import static
 from .settings import MEDIA_ROOT
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', all_products, name='index'),
@@ -33,5 +34,5 @@ urlpatterns = [
     url(r'^checkout/', include(urls_checkout)),
     url(r'^$', RedirectView.as_view(url='issues/')),
     url(r'issues/', include('issues.urls')),
-    url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]

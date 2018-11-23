@@ -1,8 +1,8 @@
-<!-- User signin page, for user to signin and activate their account. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
+<!-- User sign in page, for user to sign in and activate their account. Code used from https://codeinstitute.net and Bootstrap scrolling-nav theme, and further developed for this project. -->
 
 {% extends "base.html" %} {% load bootstrap_tags %} {% block content %}
 
-<!-- Bootstrap styled frorm for user to signin to their account. -->
+<!-- Bootstrap styled form for user to sign in to their account. -->
 <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
     <fieldset class="form-group">
         <legend>Sign In</legend>
