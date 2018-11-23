@@ -2,27 +2,28 @@
 
 # Mythware
 
-Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user/team who would like to use project management software (application fictious for purpose of this project), to manage projects. Mythware provides user authentication, allowing users to request free bug fixes or paid upgrades and monitor issues via an issues tracker.
+Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user/team who would like (software application fictious for purpose of this project), to manage projects. Mythware provides a user authentication feature, allowing users to request free bug fixes and paid upgrades. User profiles also provide access to an issues tracker, allowing users to track issues.
 
 ## UX
 The following section describes the UX process for this project.
 
 #### UX Process
-1. **Layout** - Reviewed the Code Institute learnings to date, Bootstrap themes and GitHub to extract design ideas.
+1. **Layout** - Reviewed the Code Institute education to date and Bootstrap themes to extract design ideas.
 2. **User Stories** - Walked through user stories.
-    1. **Homepage - Header** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
-    2. **Navbar - Features** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
-    2. **Navbar - Pricing** - As a user, I want to be able to easily access, update and delete recipes.
-    3. **Navbar - Documentation** - As a user, I want to be able to add new recipes, to contribute to the database of recipes, for other users to access.
-    4. **Navbar - Contact** - As a user, I want to be able to contact the website developers to offer feedback and suggestions.
-    5. **Navbar - Mythware** - As a user, I want to be able to understand the health benefits of raw desserts and the functionality of this website.
-    5. **Navbar - Sign Up** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    6. **Navbar - Sign In** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    7. **Navbar - Cart** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    8. **Navbar - Profile** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    9. **Navbar - Sign Out** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    10. **Navbar - Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
-    11. **Navbar - New Issues** - As a user, I want to be able to follow Raw Dessert Recipes on social media, to be a part of the raw community and interact with this community online.
+    1. **Homepage - Header** - As a user, I want to be able to understand the purpose of this website and what to do next.
+    2. **Navbar - Features** - As a user, I want to be able to understand the feaures of the software application.
+    2. **Navbar - Pricing** - As a user, I want to be able to understand the pricing for all products.
+    3. **Navbar - Documentation** - As a user, I want to be able to access documentation for the software application to refer to.
+    4. **Navbar - Contact** - As a user, I want to be able to contact the company and developers to offer feedback and suggestions.
+    5. **Navbar - Social Links** - As a user, I want to be able to follow Mythware on social media, to interact with this community online.
+    5. **Navbar - Mythware** - As a user, I want to be able to go back to the homepage header whilst navigating any page.
+    5. **Navbar - Sign Up** - As a user, I want to be able to create a new account, to purchase the software application, to purchase upgrades and to log/track issues.
+    6. **Navbar - Sign In** - As a user, I want to be able to sign in to my account and to log/track issues.
+    7. **Navbar - Cart** - As a user, I want to be able to add products to a cart, and for the cart to persist on all pages during my session.
+    8. **Navbar - Profile** - As a user, I want to be able to view my profile, and log/track issues.
+    9. **Navbar - Sign Out** - As a user, I want to be able to sign out of my account.
+    10. **Navbar - Issues** - As a user, I want to be able to view and track all issues. I also want to be able to click into each issue to view/edit the issues details.
+    11. **Navbar - New Issues** - As a user, I want to be able to create a new issues that is added to the issues tracker.
 3. **Wireframe** - Sketched the wireframe on paper, to include the features for each user story.
 
 ## Features
@@ -30,11 +31,20 @@ The following section describes the UX process for this project.
 ### Existing Features
 The following section describes the front-end features in this project.
 
-1. **Navbar - Home** - Provide users with a navbar menu, which brings users to the home page. The home page includes a summary on the health benefits of raw food and a description about the website.
-2. **Navbar - Recipes** - Provides users with a navbar menu, which brings users to the recipes page, displaying each recipe title and description on a card. Recipe details can be viewed by selecting 'View Recipe'. The recipe selected is then displayed, which contains a recipe title, description, ingredients, instructions, author and date posted. Users are also provided with an 'Update Recipe' and 'Delete Forever' button, which allows them to update all areas of a recipe or to delete a recipe. A warning message is displayed with a red background, above the Delete Forever and Update Recipe button.
-3. **Navbar - New Recipes** - Provides users with a navbar menu, which brings users to the new recipes page. This page displays a blank form and allows users to add new recipes, which are then displayed on the recipes page.
-4. **Navbar - Contact** - Provides users with a navbar menu item, which brings users to the contact page. This page displays a blank form, which allows users to contact the website developers to offer feedback and suggestions (not currently wired up to an email address as this is not a real business).
-5. **Footer - Social Links** - Provides users with links to the website social media pages (no current social media pages for this project as this is not a real business).
+1. **Homepage - Header** - Provides users with a homepage header, which provides a summary of the purpose of this website. The header also provides a call-to-action, 'get started' button, which brings users to the pricing section.
+2. **Navbar - Features** - Provides users with a navbar menu, which brings users to the homepage features section, displaying an overview of the software features.
+3. **Navbar - Pricing** - Provides users with a navbar menu, which brings users to the homepage pricing section, displaying a pricing card for each product. Each card has a feature that allows users to add as many number of products as they would like to the cart. When a user selects add, the chosen items are added to the cart. The cart navbar menu item is then highlighted with a badge number, displaying how many items have been added to the cart. The Pricing section also includes a link to 'Log and rack a new issue', which brings a user to the sign in page, which is required to access the issues tracker, via a users profile.
+4. **Navbar - Documentation** - Provides users with a navbar menu, which brings users to the products/homepage documentation section. This section includes a link to 'technical documentation', wihch brings users to the documenation required for reference whilst using this software application.
+5. **Navbar - Contact** - Provides users with a navbar menu item, which brings users to the products/homepage contact section. This sections displays contact information, which allows users to contact the company and developers to offer feedback and suggestions (not currently wired up to an email address as this is not a real business).
+6. **Navbar - Social Links** - Provides users with links to the website social media pages (no current social media pages for this project as this is not a real business), for users to be part of the online community.
+7. **Navbar - Mythware** - Provides users with a navbar menu, displayed on all pages, which brings users back to the homepage.
+8. **Navbar - Sign Up** - Provides users with a navbar menu, which brings users to a sign up page. After signing up the users profile is displayed on the navbar menu, providing user with access to their profile.
+9. **Navbar - Sign In** - Provides users with a navbar menu, which brings users to a sign in page. After signing in the users profile is displayed on the navbar menu, providing user with access to their profile.
+10. **Navbar - Cart** - Provides users with a navbar menu, which brings users to the cart page. On the cart page users can process products in their cart, to a checkout and process payment for their items, via a form.
+11. **Navbar - Profile** - Provides users with a navbar menu, which brings users to their profile, where users can track and log issues.
+12. **Navbar - Sign Out** - Provides users with a navbar menu, which allows users to sign out of their account.
+13. **Navbar - Issues** - Provides users with a navbar menu, which brings users to an issues tracker, allowing users to track and edit issues.
+14. **Navbar - New Issues** - Provides users with a navbar menu, which brings users to a new form, allowing users to log a new issue.
 
 ### Features to Implement
 1. **Blog** - Add a feature to include a blog page.
@@ -174,14 +184,5 @@ The following section describes the process to deploy this project to Heroku.
 
 ## Credits
 
-### Content
-
-- The background photo on all pages of this website was copied from [Background photo](https://image.freepik.com/foto-gratis/barras-de-chocolate-oscuro-con-granos-de-cacao-en-la-mesa-de-madera_23-2147873730.jpg).
-- The photo on the home text section of this website was copied from [Home photo](https://image.freepik.com/free-photo/fresh-chocolate-mini-cakes_23-2147896378.jpg).
-- The health benefits text on the home page text section of this website was copied from [About health benefits](https://www.webmd.com/diet/a-z/raw-foods-diet).
-- The photo on the recipes page of this website was copied from [Recipes photo](https://image.freepik.com/free-photo/melted-chocolate-bowl-and-crushed-bar-on-chopping-board-with-wooden-spoon_23-2147867190.jpg).
-- The Recipes for this website were copied from [Recipes](http://rawfoodrecipes.com/).
-
 ### Acknowledgements
-- I received inspiration for this project from my personal interest in food for health. [Mark Sisson](https://www.marksdailyapple.com/) a Paleo and Ketogenic expert, has in particular commenced my interest in food for health.
 - For the technical skills used in this project, I harnessed the knowledge gained from the [Code Institute - Diploma in Software Development](https://www.codeinstitute.net/), [Stack Overflow](https://stackoverflow.com/), [W3 Schools](https://www.w3schools.com/), [Bootstrap](http://getbootstrap.com/) and [Bootsnipp](https://bootsnipp.com/).
