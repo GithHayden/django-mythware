@@ -173,13 +173,14 @@ Bug: Error = django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting
 Bug: OPEN = Password reset. ERROR = ConnectionRefusedError at /accounts/password-reset/.
 Bug: OPEN = Stripe payment not processing. Fix - Will only process when deloyed?
 Bug: Travis - failing due to requirements libraries not required/out of date. Failed due to import env code required updating. Travis error - use pip freeze, rather than pip3 freeze.
-TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
-AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
+Bug: TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
+Bug: AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
+Bug: Cart, checkout total and button not aligned / not responsive - wrapped div container around section.
+Bug: Issues Tracker Not Responsive.
+Bug: Issues Details: Not Responsive.
 
 Features to Implement
 Add #Open #Closed.
-Stripe payment, update form to flow across two columns, rather than straight down.
-Remove image func from products or keep for future iterations?
 Add Blog.
 Add Sort to Issues Tracker.
 Add scroll or indexing to issues tracker.
@@ -189,7 +190,6 @@ Add upvotes.
 Add bugs complete per day, week, month with graph/pie chart.
 Update coding naming conventions from copied code, to suit this template, eg update blog to issue everywhere.
 Update to have homepage and products as seperate apps for more streamlined build?
-Automated testing.
 Issues Tracker - Status Field = color code per status type.
 
 Installations/Technologies
@@ -197,20 +197,3 @@ sudo pip3 install django-forms-bootstrap
 sudo pip3 install Pillow
 sudo pip3 install stripe
 https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
-
-
-
-
-
-RESPONSIVE
-Fix Issues Tracker
-Fix Issues Details
-Fix Cart total and checkout button - wrapped around a container div
-Check all pages on all screen sizes
-
-
-
-
-
-
-
