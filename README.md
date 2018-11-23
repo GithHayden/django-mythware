@@ -176,8 +176,8 @@ Bug: Travis - failing due to requirements libraries not required/out of date. Fa
 Bug: TemplateDoesNotExist at /accounts/login/ = remove brackets in commentary {% extends "base.html" %}.
 Bug: AttributeError at /issues/16/ | 'Post' object has no attribute 'views' = Removed post.views += 1 from issues views.py, obsolete code.
 Bug: Cart, checkout total and button not aligned / not responsive - wrapped div container around section.
-Bug: Issues Tracker Not Responsive.
-Bug: Issues Details: Not Responsive.
+Bug: Issues Tracker Not Responsive, data overlaying.
+Bug: Issues Details: Not Fully Responsive. Updated divs, p tags and margins.
 
 Features to Implement
 Add #Open #Closed.

@@ -75,22 +75,23 @@
                     </div>
                 </div>
                 {% endif %}
-                <div class="container bg-color-sky-light m-5">
+                <div class="container bg-color-sky-light m-3">
                     {% block content %}
-                    <div class="row ml-5 mr-5 mt-5 mb-3">
+                    <div class="row ml-5 mr-5 mt-5 mb-2">
                         <div class="col-xs-9 mb-3">
-                            <h3 class="mb-3">{{ post.title }}</h3><span class="boldtext"><b>Details: </b>{{ post.details }}
+                            <h4 class="mb-w">{{ post.title }}</h4><span class="boldtext">{{ post.details }}
                         </div>
                     </div>
                     <div class="row ml-5 mb-5 mr-5">
                         <div class="col-xs-9">
-                            <p> <b>Date Posted: </b>{{ post.published_date }}</p>
-                            <p><span class="boldtext"><b>Author: </b></span> {{post.author}}<b>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Issue Type: </b></span> {{ post.issue_type }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <b>Amount Paid: </b></span>€ {{ post.amount_paid }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <b>Status: </b><span class="badge badge-info mb-3 mt-3">{{ post.status }}</p>
-                            <a href="{% url 'get_posts' %}" class="btn btn-secondary mr-3">Back To Issues</a>
-                            <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Edit Issue</a></span>
+                            
+                            <p><b>Date Posted: </b>{{ post.published_date }}</p>
+                            <p><span><b>Author: </b></span> {{post.author}}</p>
+                            <p><span><b>Issue Type: </b></span> {{ post.issue_type }}</p>
+                            <p><span><b>Amount Paid: </b></span>€ {{ post.amount_paid }}</p>
+                            <p><span><b>Status: </b></span><span class="badge badge-info mb-3 mt-3">{{ post.status }}</p></span>
+                                <a href="{% url 'get_posts' %}" class="btn btn-secondary mr-2 mb-2">Back To Issues</a>
+                                <a href="{% url 'edit_post' post.id %}" class="btn btn-warning mr-2 mb-2">Edit Issue</a></span>
                         </div>
                     </div>
                 </div>
