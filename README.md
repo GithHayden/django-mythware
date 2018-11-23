@@ -59,6 +59,8 @@ The following section describes all technologies used to develop this project.
 
 - [Cloud 9 IDE](https://aws.amazon.com/cloud9/)
     - This project used **Cloud 9**, an online integrated development environment, to construct the code end to end.
+- [Travis CI](https://travis-ci.org/)
+    - This project used **Travis CI**, a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub. 
 - [Django](https://www.djangoproject.com/)
     - This project uses **Django**, a Python web-framework. Django's primary goal is to ease the creation of complex, database-driven websites. The framework emphasizes reusability and pluggability of components, less code, low coupling, rapid development, and the principle of don't repeat yourself.
 - [Bootstrap](https://getbootstrap.com/)
