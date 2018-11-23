@@ -68,6 +68,16 @@ The following section describes all technologies used to develop this project.
         - **All Other Code**: Compiled by the project developer.
 - [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/)
     - This project uses **Bootstrap Forms**, a library to allow quicker implementation of forms throughout the project.
+- [Gunicorn](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **Gunicorn**, a package runs the application on the server.
+- [Postgres Database](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **Postgres DB**, provided via Heroku Add Ons.
+- [Dj-database-url](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **dj-database-url**, a package that allows us to connect to a DB url
+- [Psycopg2](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **psycopg2**, a package for connecting to the Postgres database.
+- [Whitenoise](https://django-bootstrap-form.readthedocs.io/en/latest/)
+    - This project uses **Whitenoise**, a package that allows the applcation to host its static files correctly on Heroku. Static files can also be hosted on Heroku via AWS S3 and IAM services.
 - [Stripe API](https://stripe.com/)
     - This project uses **Stripe API**, which allows individuals and businesses to receive payments over the Internet
 - [Jinga](http://jinja.pocoo.org/)
@@ -87,7 +97,7 @@ The following section describes all technologies used to develop this project.
 - [Heroku](https://www.heroku.com/home)
     - This project uses **Heroku**, a web hosting service that supports Python applications, for final project deployment.
 - [All Other Technologies](https://startbootstrap.com/template-overviews/business-casual/)
-    - All other technologies within this project were included with the Bootstrap template.
+    - All other technologies within this project were included with the Bootstrap template and Django installation.
 
 
 ## Testing
@@ -238,31 +248,14 @@ The following section describes the process to deploy this project to Heroku.
 1. Ensure all required technologies are installed locally, as per the `requirements.txt`file.
 2. Via Linux Terminal, login to Heroku, using 'heroku login' command. Input Heroku login details.
 3. Create new Heroku app, using 'heroku apps:create appname' command.
-
-Go to Resources to add a DB > type Postgres and choose Heroku Postgres > Hobby - Free
-sudo pip3 install dj-database-url - this is a package that allows us to connect to a DB url
-sudo pip3 install psycopg2 - this is a package for connecting to postgres databases
-Copy Postrgres URL from Heroku, under Settings - Reveal Config Vars. Update env.py > paste in Heroku postgres url
-python3 manage.py makemigrations - no changes detected. python3 manage.py migrate
-As this is a new empty DB, we need to create a new superusr. ython3 manage.py createsuperuser
-The sqlite db that we had, was just for testing, you are now going to have to now rebuild all the products. NOTE: PRIOR PRODUCTS ADDED WILL DISAPPEAR AT THIS STAGE.
-Update allowed hosts. ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), 'mythware.herokuapp.com']
-
-sudo pip3 install gunicorn
-Procfile
-heroku config:set DISABLE_COLLECTSTATIC=1
-
-sudo pip3 install whitenoise - allows us to host our static files correctly on Heroku
-
-UNINSTALL boto3 & libraries not required?
-
-4. Push project to Heroku, using 'push -u heroku master' command.
-5. Create scale, using 'heroku ps:scale web=1' command.
-6. Login to Heroku and select newly created app.
-7. Select settings. Select ‘Reveal Config'. Add IP 0.0.0.0 and PORT 5000.
-8. From 'More' menu on the top right, select 'Restart all dynos'.
-9. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
-10. Deployed via Heroku: [Mythware](https://mythware.herokuapp.com/).
+4. Select Resources. Type Postgres and select Heroku Postgres > Hobby - Free.
+5. Select Settings, Reveal Config Vars. Copy DB url and paste into env.py.
+6. Create a new DB. NOTE: Creating a new DB will lose all database information stored within IDE. You will be reqired to re-update this date when a new DB is created, therefore be prepared with saving any information that may be lost at this point. Execute python manage.py makemigrations and python3 manage.py migrate within IDE.
+7. Create a new superuser. Execute python3 manage.py createsuperuser and populate as required.
+8. Update allowed hosts within settings.py with your Heroku host name. Exmaple, ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), 'mythware.herokuapp.com'].
+9. Push project to Heroku, using 'push -u heroku master' command.
+10. View app: In settings, select Domain URL, NOT Git URL to view your hosted application.
+11. Deployed via Heroku: [Mythware](https://mythware.herokuapp.com/).
 
 
 ## Credits
