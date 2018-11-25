@@ -70,15 +70,15 @@ The following section describes all technologies used to develop this project.
         - **All Other Code**: Compiled by the project developer.
 - [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/)
     - This project uses **Bootstrap Forms**, a library to allow quicker implementation of forms throughout the project.
-- [Gunicorn](https://django-bootstrap-form.readthedocs.io/en/latest/)
+- [Gunicorn](https://gunicorn.org/)
     - This project uses **Gunicorn**, a package that runs the application on the server.
-- [Postgres Database](https://django-bootstrap-form.readthedocs.io/en/latest/)
+- [Postgres Database](https://www.postgresql.org/)
     - This project uses **Postgres DB**, a relational database management system (DBMS), set up via Heroku Add Ons.
-- [Dj-database-url](https://django-bootstrap-form.readthedocs.io/en/latest/)
+- [Dj-database-url](https://pypi.org/project/dj-database-url/)
     - This project uses **dj-database-url**, a package that allows the project to connect to a DB url
-- [Psycopg2](https://django-bootstrap-form.readthedocs.io/en/latest/)
+- [Psycopg2](http://initd.org/psycopg/)
     - This project uses **psycopg2**, a package for connecting to the Postgres database.
-- [Whitenoise](https://django-bootstrap-form.readthedocs.io/en/latest/)
+- [Whitenoise](http://whitenoise.evans.io/en/stable/)
     - This project uses **Whitenoise**, a package that allows the applcation to host its static files on Heroku. Static files could also be hosted on Heroku, via AWS S3 and IAM services.
 - [Stripe API](https://stripe.com/)
     - This project uses **Stripe API**, which allows individuals and businesses to receive payments over the Internet
