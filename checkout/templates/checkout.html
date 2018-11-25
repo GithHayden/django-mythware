@@ -12,32 +12,40 @@
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %} {% block content %}
 
+
 <!-- Cart Items. -->
-<div class="container">
-    <div class="row">
-        {% for item in cart_items %}
-        <div class="col-md-4 md-margin-b-30">
-            <div>
-                <div class="pricing-list-v4-header">
-                    <h4 class="pricing-list-v4-title">{{ item.product.name }}</h4>
-                    <span class="pricing-list-v4-subtitle">{{ item.product.description }}</span>
-                </div>
-                <div>
-                    <div class="margin-b-40">
-                        <span class="pricing-list-v4-price">{{ item.product.price }}</span>
-                        <div>Qty = {{item.quantity}}</div>
+
+<div>
+    <div class="content-md container">
+        <div class="row">
+            {% for item in cart_items %}
+            <div class="col-md-4 md-margin-b-30">
+                <!-- Pricing List -->
+                <div class="pricing-list-v4 radius-10">
+                    <div class="pricing-list-v4-header">
+                        <h4 class="pricing-list-v4-title">{{ item.product.name }}</h4>
+                        <span class="pricing-list-v4-subtitle">{{ item.product.description }}</span>
+                    </div>
+                    <div class="pricing-list-v4-content">
+                        <div class="margin-b-40">
+                            <span>Each € {{ item.product.price }}</span>
+                        </div>
+                        {% csrf_token %}
+                        <div>
+                            <div>Qty = {{item.quantity}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
-    <hr>
 </div>
 
 <div class="container">
     <strong><p><span style="font-size:20px" aria-hidden="true"> TOTAL € {{ total }}</p></span></strong>
 </div>
+<hr>
 
 
 <div class="container">
