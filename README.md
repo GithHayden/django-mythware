@@ -2,7 +2,7 @@
 
 # Mythware
 
-Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user who would like to manage projects. Mythware provides a user authentication feature, allowing users to request free bug fixes and paid upgrades via an issue’s tracker.
+Mythware is an agile project management software application, developed using **Django**, a Python web-framework. The target audience is any user who would like to manage projects. Mythware provides a user authentication feature, allowing users to create an account, make payments, request free bug fixes and request paid upgrades via an issue’s tracker.
 
 
 ## UX
