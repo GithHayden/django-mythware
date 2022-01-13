@@ -1,5 +1,5 @@
 Django==1.11.15
-Pillow==5.2.0
+Pillow==9.0.0
 SecretStorage==2.0.0
 argparse==1.2.1
 boto3==1.9.50
